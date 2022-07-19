@@ -224,7 +224,7 @@ rami:energyEfficiencyValue rdf:type owl:ObjectProperty ;
                            rdfs:domain rami:EnergyEfficiency ;
                            rdfs:range om:Measure ;
                            rdfs:comment "Points to the value of the Energy Efficiency comsuption."@en ;
-                           rdfs:label "energy Efficiency Value"@en .
+                           rdfs:label "energy Efficiency Value1"@en .
 
 
 ###  https://w3id.org/i40/rami#hasComponentManager
