@@ -387,7 +387,7 @@ aas:File rdf:type owl:Class;
                rdfs:label "MESConnection"@iri-based . 
 #  --------------------------- Class  17------------------------- 
 om:Unit rdf:type owl:Class; 
-        rdfs:label "Unit67"@en . 
+        rdfs:label "Unit611"@en . 
 #  --------------------------- Class  18------------------------- 
 aas:AssetAdministrationShellEnvironment rdf:type owl:Class; 
                                         rdfs:label "AssetAdministrationShellEnvironment"@IRI-based; 
