@@ -1,0 +1,35 @@
+@base <http://example.com/ns#>.
+@prefix queriedBy: <http://purl.org/db/>.
+@prefix hasPrimaryKey: <http://purl.org/db/>.
+@prefix store: <http://purl.org/db/>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix Graph: <http://purl.org/db/>.
+@prefix Entity: <http://purl.org/db/>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+
+
+<#Mapping1> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "/data1/project/mappingFolder/source/myFile0.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		rr:template "http://example.com/{id}";
+		rr:class store
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate Entity;
+		rr:objectMap [rml:reference "lastname"]
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate Graph;
+		rr:objectMap [rml:reference "email"]
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate queriedBy;
+		rr:objectMap [rml:reference "firstname"]
+	].
