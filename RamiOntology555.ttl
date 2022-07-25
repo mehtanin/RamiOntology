@@ -319,7 +319,8 @@ foaf:Image rdf:type owl:Class;
            rdfs:label "Image"@iri-based . 
 #  --------------------------- Class  1------------------------- 
 lgdo:Museum rdf:type owl:Class; 
-            rdfs:label "Museum"@IRI-based . 
+            rdfs:label "Museum"@IRI-based; 
+            rdfs:label "Museum"@iri-based . 
 #  --------------------------- Class  2------------------------- 
 aas:ConceptDescription rdf:type owl:Class; 
                        rdfs:label "ConceptDescription"@IRI-based; 
@@ -395,7 +396,8 @@ aas:File rdf:type owl:Class;
 #  --------------------------- Class  18------------------------- 
 om:Unit rdf:type owl:Class; 
         rdfs:label "Unit"@IRI-based; 
-        rdfs:label "Unit6789"@en . 
+        rdfs:label "Unit"@iri-based; 
+        rdfs:label "Unit678"@en . 
 #  --------------------------- Class  19------------------------- 
 aas:AssetAdministrationShellEnvironment rdf:type owl:Class; 
                                         rdfs:label "AssetAdministrationShellEnvironment"@IRI-based; 
@@ -504,7 +506,7 @@ aas:IdentifierType rdf:type owl:Class;
        rdfs:label "Value"@en . 
 #  --------------------------- Class  41------------------------- 
 om:Measure rdf:type owl:Class; 
-           rdfs:label "Measure200"@en . 
+           rdfs:label "Measure201"@en . 
 #  --------------------------- Class  42------------------------- 
 :LifeCycleDimension rdf:type owl:Class; 
                     rdfs:subClassOf :Dimension ;
