@@ -490,7 +490,8 @@ ssn:Sensor rdf:type owl:Class;
 #  --------------------------- Class  38------------------------- 
 sto:Standard rdf:type owl:Class; 
              rdfs:isDefinedBy <https://w3id.org/i40/sto/#Standard> ;
-             rdfs:label "Standard45"@en . 
+             rdfs:label "Standard"@IRI-based; 
+             rdfs:label "Standard"@iri-based . 
 #  --------------------------- Class  39------------------------- 
 aas:IdentifierType rdf:type owl:Class; 
                    rdfs:label "IdentifierType"@IRI-based; 
@@ -503,8 +504,7 @@ aas:IdentifierType rdf:type owl:Class;
        rdfs:label "Value"@en . 
 #  --------------------------- Class  41------------------------- 
 om:Measure rdf:type owl:Class; 
-           rdfs:label "Measure"@IRI-based; 
-           rdfs:label "Measure"@iri-based . 
+           rdfs:label "Measure200"@en . 
 #  --------------------------- Class  42------------------------- 
 :LifeCycleDimension rdf:type owl:Class; 
                     rdfs:subClassOf :Dimension ;
