@@ -1,0 +1,35 @@
+@base <http://example.com/ns#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix sim: <http://purl.org/ontology/similarity/>.
+@prefix lgdo: <http://linkedgeodata.org/ontology/>.
+@prefix maso: <http://securitytoolbox.appspot.com/>.
+@prefix plo: <http://purl.org/net/>.
+@prefix schema: <http://schema.org/>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+
+
+<#Mapping1> a rr:TriplesMap;
+	rml:logicalSource [
+		rml:source "/home/mrashikh/Workspace/mappingFolder/source/myFile0.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		rr:template "http://example.com/{id}";
+		rr:class lgdo:Museum
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate sim:weight;
+		rr:objectMap [rml:reference "firstname"]
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate plo:week;
+		rr:objectMap [rml:reference "lastname"]
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate schema:awards;
+		rr:objectMap [rml:reference "email"]
+	].
