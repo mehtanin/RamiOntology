@@ -1,0 +1,395 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<https://w3id.org/i40/rami#> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix obda: 		<https://w3id.org/obda/vocabulary#> .
+@prefix vann: 		<http://purl.org/vocab/vann/> .
+@prefix dcterms: 		<http://purl.org/dc/terms/> .
+@prefix vcard: 		<http://www.w3.org/2006/vcard/ns#> .
+@prefix prov: 		<http://www.w3.org/ns/prov#> .
+@prefix dul: 		<http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix void: 		<http://rdfs.org/ns/void#> .
+@prefix skos: 		<http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: 		<http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix : 		<https://w3id.org/i40/rami#> .
+@prefix ssn: 		<http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix sto: 		<https://w3id.org/i40/sto#> .
+@prefix rami: 		<https://w3id.org/i40/rami#> .
+@prefix om: 		<http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix foaf: 		<http://xmlns.com/foaf/spec/> .
+@prefix DUL: 		<http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@base 			<https://w3id.org/i40/rami#> .
+
+<https://w3id.org/i40/rami#> rdf:type owl:Ontology ;
+                             dc:title "undefined"@en;
+                             dc:description "undefined"@en;
+                             owl:versionInfo "0.3"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 40 ###
+#  --------------------------- Property 0------------------------- 
+:energyEfficiencyValue rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Points to the value of the Energy Efficiency comsuption." ;
+                       rdfs:label "energyEfficiencyValue"@IRI-based; 
+                       rdfs:label "energy Efficiency Value1"@en; 
+                       rdfs:domain :EnergyEfficiency;
+                       rdfs:range om:Measure . 
+#  --------------------------- Property 1------------------------- 
+:hasRAMIHierarchyLevel rdf:type owl:ObjectProperty ;
+                       rdfs:label "hasRAMIHierarchyLevel"@IRI-based; 
+                       rdfs:range :HierarchyLevelDimension . 
+#  --------------------------- Property 2------------------------- 
+:hasComponentManager rdf:type owl:ObjectProperty ;
+                     rdfs:label "hasComponentManager"@IRI-based; 
+                     rdfs:label "has Component Manager"@en; 
+                     rdfs:domain :AdminShell;
+                     rdfs:range :ComponentManager . 
+#  --------------------------- Property 3------------------------- 
+:isConnectedTo rdf:type owl:ObjectProperty ;
+               rdfs:comment "Connects the Admin Shell with the different RAMI4.0 Dimensions" ;
+               rdfs:label "isConnectedTo"@IRI-based; 
+               rdfs:label "is Connected To"@en; 
+               rdfs:domain :AdminShell;
+               rdfs:range :Dimension . 
+#  --------------------------- Property 4------------------------- 
+:inventoryNumber rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+                 rdfs:label "inventoryNumber"@IRI-based; 
+                 rdfs:domain :Asset;
+                 rdfs:range xsd:string . 
+#  --------------------------- Property 5------------------------- 
+:publishedURL rdf:type owl:DatatypeProperty ;
+              rdfs:label "publishedURL"@IRI-based; 
+              rdfs:range rdfs:Literal . 
+#  --------------------------- Property 6------------------------- 
+geo:long rdf:type owl:DatatypeProperty ;
+         rdfs:comment "The WGS84 longitude of a SpatialThing (decimal degrees)." ;
+         rdfs:label "long"@IRI-based; 
+         rdfs:label "long"@en; 
+         rdfs:domain :Machine;
+         rdfs:range xsd:decimal . 
+#  --------------------------- Property 7------------------------- 
+:hasSubmodel rdf:type owl:ObjectProperty ;
+             rdfs:comment "Points to the Admin Shell to the Submodels that describe the Admin Shell of a given Asset" ;
+             rdfs:label "hasSubmodel"@IRI-based; 
+             rdfs:label "has Submodel"@en; 
+             rdfs:domain :AdminShell;
+             rdfs:range :Submodel . 
+#  --------------------------- Property 8------------------------- 
+geo:lat rdf:type owl:DatatypeProperty ;
+        rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
+        rdfs:label "lat"@IRI-based; 
+        rdfs:label "lat"@en; 
+        rdfs:domain :Machine;
+        rdfs:range xsd:decimal . 
+#  --------------------------- Property 9------------------------- 
+:hasView rdf:type owl:ObjectProperty ;
+         rdfs:comment "Points to the differents views associated to the Administration Shell via the Submodels." ;
+         rdfs:label "hasView"@IRI-based; 
+         rdfs:label "has View"@en; 
+         rdfs:domain :Submodel;
+         rdfs:range :View . 
+#  --------------------------- Property 10------------------------- 
+om:hasUnit rdf:type owl:ObjectProperty ;
+           rdfs:label "hasUnit"@IRI-based; 
+           rdfs:label "has unit"@en; 
+           rdfs:domain om:Measure;
+           rdfs:range om:Unit . 
+#  --------------------------- Property 11------------------------- 
+:hasValue rdf:type owl:ObjectProperty ;
+          rdfs:comment "Points to the current value that can be specified through an instanced submodel (for ninstance in station 2) or through the asset." ;
+          rdfs:label "hasValue"@IRI-based; 
+          rdfs:label "has Value"@en; 
+          rdfs:domain :Submodel;
+          rdfs:range :Value . 
+#  --------------------------- Property 12------------------------- 
+:hasData rdf:type owl:ObjectProperty ;
+         rdfs:label "hasData"@IRI-based; 
+         rdfs:domain :AdminShell;
+         rdfs:range :Submodel . 
+#  --------------------------- Property 13------------------------- 
+:hasEnergyValue rdf:type owl:DatatypeProperty ;
+                rdfs:label "hasEnergyValue"@IRI-based; 
+                rdfs:domain :CumulativeEnergyConsumption;
+                rdfs:range xsd:float . 
+#  --------------------------- Property 14------------------------- 
+:logs rdf:type owl:DatatypeProperty ;
+      rdfs:label "logs"@IRI-based; 
+      rdfs:range xsd:string . 
+#  --------------------------- Property 15------------------------- 
+:inAccordanceWith rdf:type owl:ObjectProperty ;
+                  rdfs:comment "The Submodel is in accordance with a given standard specified in the STO ontology" ;
+                  rdfs:label "inAccordanceWith"@IRI-based; 
+                  rdfs:label "in Accordance With"@en; 
+                  rdfs:domain :Submodel;
+                  rdfs:range sto:Standard . 
+#  --------------------------- Property 16------------------------- 
+:hasI40ComponentId rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+                   rdfs:comment "Unique Identification of the Industry 4.0 component." ;
+                   rdfs:label "hasI40ComponentId"@IRI-based; 
+                   rdfs:label "has I40 Component Id"@en; 
+                   rdfs:domain :I4.0Component;
+                   rdfs:range xsd:string . 
+#  --------------------------- Property 17------------------------- 
+:releaseDate rdf:type owl:DatatypeProperty ;
+             rdfs:label "releaseDate"@IRI-based; 
+             rdfs:range xsd:date . 
+#  --------------------------- Property 18------------------------- 
+:describes rdf:type owl:ObjectProperty ;
+           rdfs:comment "Connect the Asset with the Administration Shell" ;
+           rdfs:label "describes"@IRI-based; 
+           rdfs:label "describes"@en; 
+           rdfs:domain :AdminShell;
+           rdfs:range :Asset . 
+#  --------------------------- Property 19------------------------- 
+:contributes rdf:type owl:ObjectProperty ;
+             rdfs:label "contributes"@IRI-based; 
+             rdfs:domain :Submodel;
+             rdfs:range prov:Agent . 
+#  --------------------------- Property 20------------------------- 
+:creationDate rdf:type owl:DatatypeProperty ;
+              rdfs:label "creationDate"@IRI-based; 
+              rdfs:domain :Submodel;
+              rdfs:range xsd:dateTime . 
+#  --------------------------- Property 21------------------------- 
+:hasReference rdf:type owl:ObjectProperty ;
+              rdfs:label "hasReference"@IRI-based; 
+              rdfs:label "has Reference"@en; 
+              rdfs:domain :Submodel . 
+#  --------------------------- Property 22------------------------- 
+:isDescribedWith rdf:type owl:DatatypeProperty ;
+                 rdfs:label "isDescribedWith"@IRI-based; 
+                 rdfs:range rdfs:Literal . 
+#  --------------------------- Property 23------------------------- 
+:hasRAMILifeCycleLayer rdf:type owl:ObjectProperty ;
+                       rdfs:label "hasRAMILifeCycleLayer"@IRI-based . 
+#  --------------------------- Property 24------------------------- 
+foaf:image rdf:type owl:DatatypeProperty ;
+           rdfs:comment "Image of the Asset reused from the FOAF ontology." ;
+           rdfs:label "image"@IRI-based; 
+           rdfs:label "image"@en; 
+           rdfs:range rdfs:Literal . 
+#  --------------------------- Property 25------------------------- 
+:hasManifest rdf:type owl:ObjectProperty ;
+             rdfs:label "hasManifest"@IRI-based; 
+             rdfs:label "has Manifest"@en; 
+             rdfs:domain :AdminShell;
+             rdfs:range :Manifest . 
+#  --------------------------- Property 26------------------------- 
+dul:isPartOf rdf:type owl:ObjectProperty, owl:TransitiveProperty ;
+             rdfs:comment "A relation between any entities, in this case, the Asset can be part of other Asset(s)." ;
+             rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+             rdfs:label "isPartOf"@IRI-based; 
+             rdfs:label "is Part Of"@en; 
+             rdfs:domain :Asset;
+             rdfs:range :Asset . 
+#  --------------------------- Property 27------------------------- 
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:label "description"@IRI-based; 
+             rdfs:domain :Asset;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 28------------------------- 
+dcterms:identifier rdf:type owl:DatatypeProperty ;
+                   rdfs:label "identifier"@IRI-based; 
+                   rdfs:range rdfs:Literal . 
+#  --------------------------- Property 29------------------------- 
+:receivedAtTime rdf:type owl:DatatypeProperty ;
+                rdfs:label "receivedAtTime"@IRI-based; 
+                rdfs:domain :AdminShell;
+                rdfs:range xsd:dateTime . 
+#  --------------------------- Property 30------------------------- 
+:hasDatatype rdf:type owl:ObjectProperty ;
+             rdfs:comment "Points to the datatypes of the Submodels" ;
+             rdfs:label "hasDatatype"@IRI-based; 
+             rdfs:label "has Datatype"@en; 
+             rdfs:domain :Submodel . 
+#  --------------------------- Property 31------------------------- 
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:label "wasGeneratedBy"@IRI-based; 
+                    rdfs:domain :Submodel;
+                    rdfs:range prov:Agent . 
+#  --------------------------- Property 32------------------------- 
+:containsAS rdf:type owl:ObjectProperty ;
+            rdfs:comment "Points the I4.0 Component to the Administration Shell" ;
+            rdfs:label "containsAS"@IRI-based; 
+            rdfs:label "contains Admin Shell"@en; 
+            rdfs:domain :I4.0Component;
+            rdfs:range :AdminShell . 
+#  --------------------------- Property 33------------------------- 
+om:hasNumericalValue rdf:type owl:DatatypeProperty ;
+                     rdfs:label "hasNumericalValue"@IRI-based; 
+                     rdfs:label "has numerical value"@en; 
+                     rdfs:range rdfs:Literal . 
+#  --------------------------- Property 34------------------------- 
+:hasAdminShellId rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+                 rdfs:label "hasAdminShellId"@IRI-based; 
+                 rdfs:domain :AdminShell;
+                 rdfs:range xsd:string . 
+#  --------------------------- Property 35------------------------- 
+:usesStandard rdf:type owl:ObjectProperty ;
+              rdfs:comment "Points to the standards describing the functions attached to the asset via the administration shell" ;
+              rdfs:label "usesStandard"@IRI-based; 
+              rdfs:label "uses Standard"@en; 
+              rdfs:range sto:Standard . 
+#  --------------------------- Property 36------------------------- 
+:hasSemanticExpression rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Points to the Expression Semantic of the Submodels" ;
+                       rdfs:label "hasSemanticExpression"@IRI-based; 
+                       rdfs:label "has Semantic Expression"@en; 
+                       rdfs:domain :Submodel;
+                       rdfs:range :ExpressionSemantic . 
+#  --------------------------- Property 37------------------------- 
+:recordedTime rdf:type owl:DatatypeProperty ;
+              rdfs:comment "Recorded Time for a Machine" ;
+              rdfs:label "recordedTime"@IRI-based; 
+              rdfs:domain :Machine;
+              rdfs:range xsd:dateTime . 
+#  --------------------------- Property 38------------------------- 
+:subModelID rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+            rdfs:comment "Unique Identification for a Submodel" ;
+            rdfs:label "subModelID"@IRI-based; 
+            rdfs:label "sub Model Id"@en; 
+            rdfs:domain :Submodel;
+            rdfs:range xsd:string . 
+#  --------------------------- Property 39------------------------- 
+:hasAssetId rdf:type owl:DatatypeProperty, owl:FunctionalProperty ;
+            rdfs:comment "Unique identification for the Asset." ;
+            rdfs:label "hasAssetId"@IRI-based; 
+            rdfs:label "has Asset Id"@en; 
+            rdfs:domain :Asset;
+            rdfs:range xsd:string . 
+###  Class Definitions (Number of Classes) 30 ###
+#  --------------------------- Class  0------------------------- 
+foaf:Image rdf:type owl:Class; 
+           rdfs:label "Image"@IRI-based . 
+#  --------------------------- Class  1------------------------- 
+:Dimension rdf:type owl:Class; 
+           rdfs:comment "Abstract class to describe the three different dimensions of RAMI4.0" ;
+           rdfs:label "Dimension"@IRI-based; 
+           rdfs:label "Dimension"@en . 
+#  --------------------------- Class  2------------------------- 
+:I4.0Component rdf:type owl:Class; 
+               rdfs:comment "Globally uniquely identifiable participant with communication capability consisting of administration shell and asset within an I4.0 system. nSource: Industrie 4.0 – Begriffe/Terms, VDI Statusreport Industrie 4.0 (April 2017)" ;
+               rdfs:isDefinedBy <https://www.plattform-i40.de/I40/Navigation/EN/Service/Glossary/glossary.html> ;
+               rdfs:label "I4.0Component"@IRI-based; 
+               rdfs:label "I4.0Component"@en . 
+#  --------------------------- Class  3------------------------- 
+:Asset rdf:type owl:Class; 
+       rdfs:label "Asset"@IRI-based . 
+#  --------------------------- Class  4------------------------- 
+:Platform rdf:type owl:Class; 
+          rdfs:label "Platform"@IRI-based . 
+#  --------------------------- Class  5------------------------- 
+prov:Agent rdf:type owl:Class; 
+           rdfs:label "Agent"@IRI-based . 
+#  --------------------------- Class  6------------------------- 
+:Submodel rdf:type owl:Class; 
+          rdfs:comment "Describe the different types of Data related to the I4.0 Asset" ;
+          rdfs:label "Submodel"@IRI-based; 
+          rdfs:label "Submodel"@en . 
+#  --------------------------- Class  7------------------------- 
+:MESConnection rdf:type owl:Class; 
+               rdfs:subClassOf :Submodel ;
+               rdfs:label "MESConnection"@IRI-based . 
+#  --------------------------- Class  8------------------------- 
+om:Unit rdf:type owl:Class; 
+        rdfs:label "Unit21"@en . 
+#  --------------------------- Class  9------------------------- 
+:ComponentManager rdf:type owl:Class; 
+                  rdfs:label "ComponentManager"@IRI-based; 
+                  rdfs:label "Component Manager"@en . 
+#  --------------------------- Class  10------------------------- 
+:HierarchyLevelDimension rdf:type owl:Class; 
+                         rdfs:subClassOf :Dimension ;
+                         rdfs:label "HierarchyLevelDimension"@IRI-based . 
+#  --------------------------- Class  11------------------------- 
+:Manifest rdf:type owl:Class; 
+          rdfs:label "Manifest"@IRI-based; 
+          rdfs:label "Manifest"@en . 
+#  --------------------------- Class  12------------------------- 
+:SensorMeasurement rdf:type owl:Class; 
+                   rdfs:subClassOf :Submodel ;
+                   rdfs:label "SensorMeasurement"@IRI-based . 
+#  --------------------------- Class  13------------------------- 
+:View rdf:type owl:Class; 
+      rdfs:comment "Different views associated to the Administration Shell via the Submodels" ;
+      rdfs:isDefinedBy <https://www.plattform-i40.de/I40/Redaktion/DE/Downloads/Publikation/hm-2018-trilaterale-coop.html> ;
+      rdfs:label "Sicht"@de; 
+      rdfs:label "View"@IRI-based; 
+      rdfs:label "View"@en . 
+#  --------------------------- Class  14------------------------- 
+:Order rdf:type owl:Class; 
+       rdfs:label "Order"@IRI-based . 
+#  --------------------------- Class  15------------------------- 
+:TransportInterface rdf:type owl:Class; 
+                    rdfs:subClassOf :Submodel ;
+                    rdfs:label "TransportInterface"@IRI-based . 
+#  --------------------------- Class  16------------------------- 
+:Machine rdf:type owl:Class; 
+         rdfs:subClassOf :Asset ;
+         rdfs:label "Machine"@IRI-based . 
+#  --------------------------- Class  17------------------------- 
+:ExpressionSemantic rdf:type owl:Class; 
+                    rdfs:comment "Specifies which role the property plays in an interaction, i.e. which nexpression the provider of the property intends. nValid values are: Requirement (for requests that are to be confirmed or rejected) Confirmations (for responses to requests that describe the capability of an asset) Measurement (if a measured or actual value is provided)" ;
+                    rdfs:isDefinedBy <https://www.zvei.org/fileadmin/user_upload/Presse_und_Medien/Publikationen/2017/April/Asset_Administration_Shell/ZVEI_WP_Verwaltungschale_Englisch_Download_03.04.17.pdf> ;
+                    rdfs:label "Ausprägungsaussage"@de; 
+                    rdfs:label "ExpressionSemantic"@IRI-based; 
+                    rdfs:label "Expression Semantic"@en . 
+#  --------------------------- Class  18------------------------- 
+:CumulativeEnergyConsumption rdf:type owl:Class; 
+                             rdfs:label "CumulativeEnergyConsumption"@IRI-based . 
+#  --------------------------- Class  19------------------------- 
+ssn:Sensor rdf:type owl:Class; 
+           rdfs:label "Sensor"@IRI-based . 
+#  --------------------------- Class  20------------------------- 
+sto:Standard rdf:type owl:Class; 
+             rdfs:isDefinedBy <https://w3id.org/i40/sto/#Standard> ;
+             rdfs:label "Standard"@IRI-based . 
+#  --------------------------- Class  21------------------------- 
+:Value rdf:type owl:Class; 
+       rdfs:comment "Current value that can be specified through an instanced submodel (for ninstance in station 2) or through the asset, for example." ;
+       rdfs:label "Value"@IRI-based; 
+       rdfs:label "Value"@en . 
+#  --------------------------- Class  22------------------------- 
+om:Measure rdf:type owl:Class; 
+           rdfs:label "Measure"@IRI-based . 
+#  --------------------------- Class  23------------------------- 
+:LifeCycleDimension rdf:type owl:Class; 
+                    rdfs:subClassOf :Dimension ;
+                    owl:disjointWith :HierarchyLevelDimension ;
+                    rdfs:label "LifeCycleDimension"@IRI-based; 
+                    rdfs:label "RAMI Life Cycle Dimension"@en . 
+#  --------------------------- Class  24------------------------- 
+:SensorMeasurementData rdf:type owl:Class; 
+                       owl:equivalentClass ssn:SensorOutput ;
+                       rdfs:comment "Data measured by a sensor" ;
+                       rdfs:label "SensorMeasurementData"@IRI-based; 
+                       rdfs:label "Sensor Data"@en . 
+#  --------------------------- Class  25------------------------- 
+:Reference rdf:type owl:Class; 
+           rdfs:label "Reference"@IRI-based . 
+#  --------------------------- Class  26------------------------- 
+:ITLayerDimension rdf:type owl:Class; 
+                  rdfs:subClassOf :Dimension ;
+                  owl:disjointWith :LifeCycleDimension ;
+                  owl:disjointWith :HierarchyLevelDimension ;
+                  rdfs:label "ITLayerDimension"@IRI-based; 
+                  rdfs:label "RAMI IT Layer Dimension"@en . 
+#  --------------------------- Class  27------------------------- 
+:EnergyEfficiency rdf:type owl:Class; 
+                  rdfs:subClassOf :Submodel ;
+                  rdfs:label "EnergyEfficiency"@IRI-based . 
+#  --------------------------- Class  28------------------------- 
+:AdminShell rdf:type owl:Class; 
+            rdfs:label "AdminShell"@IRI-based; 
+            rdfs:label "Admin Shell"@en . 
+#  --------------------------- Class  29------------------------- 
+:Structure rdf:type owl:Class; 
+           rdfs:subClassOf :Submodel ;
+           rdfs:label "Structure"@IRI-based . 
