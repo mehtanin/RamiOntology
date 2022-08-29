@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,14 +44,34 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
-* Specifies which role the property plays in an interaction, i.e. which nexpression the provider of the property intends. nValid values are: Requirement (for requests that are to be confirmed or rejected) Confirmations (for responses to requests that describe the capability of an asset) Measurement (if a measured or actual value is provided)
+/** 
+* Specifies which role the property plays in an interaction, i.e. which 
+expression the provider of the property intends. 
+Valid values are: Requirement (for requests that are to be confirmed or rejected) Confirmations (for responses to requests that describe the capability of an asset) Measurement (if a measured or actual value is provided) 
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultExpressionSemantic.class)
-})
-public interface ExpressionSemantic {
+@IRI("https://w3id.org/i40/rami#ExpressionSemantic")
+public enum ExpressionSemantic {
 
+	/** 
+	* For responses to requests that describe the capability of an asset.
+	*/
+	@IRI("https://w3id.org/i40/rami#Confirmation")
+CONFIRMATION,
+
+	/** 
+	* If a measured or actual value is provided
+	*/
+	@IRI("https://w3id.org/i40/rami#Measurement")
+MEASUREMENT,
+
+	/** 
+	* For requests that are to be confirmed or rejected
+	*/
+	@IRI("https://w3id.org/i40/rami#Requirement")
+REQUIREMENT;
 
 }

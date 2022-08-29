@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,31 +44,117 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
+/**  
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultEnergyEfficiency.class)
-})
-public interface EnergyEfficiency {
+@IRI("https://w3id.org/i40/rami#EnergyEfficiency")
+public enum EnergyEfficiency {
 
-	/**
-	* Points to the value of the Energy Efficiency comsuption.
-	*
-	* More information under https://w3id.org/i40/rami#energyEfficiencyValue
-	*
-	* @return Returns the List of Measures for the property energyEfficiencyValues.
+	/** 
 	*/
+	@IRI("https://w3id.org/i40/rami#EnergyEfficiency1")
+ENERGY_EFFICIENCY1,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#EnergyEfficiency2")
+ENERGY_EFFICIENCY2;
+
+
+	
 	@IRI("https://w3id.org/i40/rami#energyEfficiencyValue")
-	List<Measure> getEnergyEfficiencyValues();
+	final public List<Measure> getEnergyEfficiencyValues() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	* Points to the value of the Energy Efficiency comsuption.
-	*
-	* More information under https://w3id.org/i40/rami#energyEfficiencyValue
-	*
-	* @param energyEfficiencyValues desired value for the property energyEfficiencyValues.
-	*/
-	 void setEnergyEfficiencyValues (List<Measure> energyEfficiencyValues);
 
+	
+	@IRI("http://www.w3.org/ns/prov#wasGeneratedBy")
+	final public List<Agent> getWasGeneratedBies() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#contributes")
+	final public List<Agent> getContributes() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	 {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	 {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#hasSemanticExpression")
+	final public List<ExpressionSemantic> getHasSemanticExpressions() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#hasValue")
+	final public List<Value> getHasValues() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#hasView")
+	final public List<View> getHasViews() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#inAccordanceWith")
+	final public List<Standard> getInAccordanceWiths() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#creationDate")
+	final public List<XMLGregorianCalendar> getCreationDates() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#subModelID")
+	final public List<String> getSubModelIDs() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 }

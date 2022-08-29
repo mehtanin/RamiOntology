@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,13 +44,49 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
+/**  
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultHierarchyLevelDimension.class)
-})
-public interface HierarchyLevelDimension {
+@IRI("https://w3id.org/i40/rami#HierarchyLevelDimension")
+public enum HierarchyLevelDimension {
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#ConnectedWorld")
+CONNECTED_WORLD,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#ControlDevice")
+CONTROL_DEVICE,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#Enterprise")
+ENTERPRISE,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#FieldDevice")
+FIELD_DEVICE,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#Product")
+PRODUCT,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#Station")
+STATION,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#WorkCenter")
+WORK_CENTER;
 
 
 }

@@ -47,7 +47,8 @@ import java.nio.charset.StandardCharsets;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
-* Current value that can be specified through an instanced submodel (for ninstance in station 2) or through the asset, for example.
+* Current value that can be specified through an instanced submodel (for 
+instance in station 2) or through the asset, for example.
 */
 @KnownSubtypes({
 	@KnownSubtypes.Type(value = DefaultValue.class)

@@ -48,27 +48,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public abstract class MachineBuilder<T extends Machine, B extends MachineBuilder<T, B>> extends ExtendableBuilder<T, B> {
 
 	/**
-	* This function allows setting a value for longs
-	* @param longs desired value to be set
-	* @return Builder object with new value for longs
-	*/
-	public B longs(List<java.math.BigDecimal> longs) {
-		getBuildingInstance().setLongs(longs);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List longs
-	* @param long desired value to be added
-	* @return Builder object with new value for longs
-	*/
-	public B long(java.math.BigDecimal long) {
-		getBuildingInstance().getLongs().add(long);
-		return getSelf();
-	}
-
-
-	/**
 	* This function allows setting a value for lats
 	* @param lats desired value to be set
 	* @return Builder object with new value for lats
@@ -85,6 +64,27 @@ public abstract class MachineBuilder<T extends Machine, B extends MachineBuilder
 	*/
 	public B lat(java.math.BigDecimal lat) {
 		getBuildingInstance().getLats().add(lat);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for longs
+	* @param longs desired value to be set
+	* @return Builder object with new value for longs
+	*/
+	public B longs(List<java.math.BigDecimal> longs) {
+		getBuildingInstance().setLongs(longs);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List longs
+	* @param long desired value to be added
+	* @return Builder object with new value for longs
+	*/
+	public B long(java.math.BigDecimal long) {
+		getBuildingInstance().getLongs().add(long);
 		return getSelf();
 	}
 
@@ -111,22 +111,22 @@ public abstract class MachineBuilder<T extends Machine, B extends MachineBuilder
 
 
 	/**
-	* This function allows setting a value for inventoryNumbers
-	* @param inventoryNumbers desired value to be set
-	* @return Builder object with new value for inventoryNumbers
+	* This function allows setting a value for images
+	* @param images desired value to be set
+	* @return Builder object with new value for images
 	*/
-	public B inventoryNumbers(List<String> inventoryNumbers) {
-		getBuildingInstance().setInventoryNumbers(inventoryNumbers);
+	public B images(List<URI> images) {
+		getBuildingInstance().setImages(images);
 		return getSelf();
 	}
 
 	/**
-	* This function allows adding a value to the List inventoryNumbers
-	* @param inventoryNumber desired value to be added
-	* @return Builder object with new value for inventoryNumbers
+	* This function allows adding a value to the List images
+	* @param image desired value to be added
+	* @return Builder object with new value for images
 	*/
-	public B inventoryNumber(String inventoryNumber) {
-		getBuildingInstance().getInventoryNumbers().add(inventoryNumber);
+	public B image(URI image) {
+		getBuildingInstance().getImages().add(image);
 		return getSelf();
 	}
 
@@ -190,6 +190,27 @@ public abstract class MachineBuilder<T extends Machine, B extends MachineBuilder
 	*/
 	public B hasAssetId(String hasAssetId) {
 		getBuildingInstance().getHasAssetIds().add(hasAssetId);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for inventoryNumbers
+	* @param inventoryNumbers desired value to be set
+	* @return Builder object with new value for inventoryNumbers
+	*/
+	public B inventoryNumbers(List<String> inventoryNumbers) {
+		getBuildingInstance().setInventoryNumbers(inventoryNumbers);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List inventoryNumbers
+	* @param inventoryNumber desired value to be added
+	* @return Builder object with new value for inventoryNumbers
+	*/
+	public B inventoryNumber(String inventoryNumber) {
+		getBuildingInstance().getInventoryNumbers().add(inventoryNumber);
 		return getSelf();
 	}
 }

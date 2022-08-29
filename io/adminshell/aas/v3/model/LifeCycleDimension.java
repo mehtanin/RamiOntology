@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,13 +44,24 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
+/**  
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultLifeCycleDimension.class)
-})
-public interface LifeCycleDimension {
+@IRI("https://w3id.org/i40/rami#LifeCycleDimension")
+public enum LifeCycleDimension {
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#Instance")
+INSTANCE,
+
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#Type")
+TYPE;
 
 
 }

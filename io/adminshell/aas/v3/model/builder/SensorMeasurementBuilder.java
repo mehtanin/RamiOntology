@@ -49,64 +49,22 @@ public abstract class SensorMeasurementBuilder<T extends SensorMeasurement, B ex
 
 
 	/**
-	* This function allows setting a value for hasViews
-	* @param hasViews desired value to be set
-	* @return Builder object with new value for hasViews
+	* This function allows setting a value for wasGeneratedBies
+	* @param wasGeneratedBies desired value to be set
+	* @return Builder object with new value for wasGeneratedBies
 	*/
-	public B hasViews(List<View> hasViews) {
-		getBuildingInstance().setHasViews(hasViews);
+	public B wasGeneratedBies(List<Agent> wasGeneratedBies) {
+		getBuildingInstance().setWasGeneratedBies(wasGeneratedBies);
 		return getSelf();
 	}
 
 	/**
-	* This function allows adding a value to the List hasViews
-	* @param hasView desired value to be added
-	* @return Builder object with new value for hasViews
+	* This function allows adding a value to the List wasGeneratedBies
+	* @param wasGeneratedBy desired value to be added
+	* @return Builder object with new value for wasGeneratedBies
 	*/
-	public B hasView(View hasView) {
-		getBuildingInstance().getHasViews().add(hasView);
-		return getSelf();
-	}
-
-
-	/**
-	* This function allows setting a value for hasValues
-	* @param hasValues desired value to be set
-	* @return Builder object with new value for hasValues
-	*/
-	public B hasValues(List<Value> hasValues) {
-		getBuildingInstance().setHasValues(hasValues);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List hasValues
-	* @param hasValue desired value to be added
-	* @return Builder object with new value for hasValues
-	*/
-	public B hasValue(Value hasValue) {
-		getBuildingInstance().getHasValues().add(hasValue);
-		return getSelf();
-	}
-
-
-	/**
-	* This function allows setting a value for inAccordanceWiths
-	* @param inAccordanceWiths desired value to be set
-	* @return Builder object with new value for inAccordanceWiths
-	*/
-	public B inAccordanceWiths(List<Standard> inAccordanceWiths) {
-		getBuildingInstance().setInAccordanceWiths(inAccordanceWiths);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List inAccordanceWiths
-	* @param inAccordanceWith desired value to be added
-	* @return Builder object with new value for inAccordanceWiths
-	*/
-	public B inAccordanceWith(Standard inAccordanceWith) {
-		getBuildingInstance().getInAccordanceWiths().add(inAccordanceWith);
+	public B wasGeneratedBy(Agent wasGeneratedBy) {
+		getBuildingInstance().getWasGeneratedBies().add(wasGeneratedBy);
 		return getSelf();
 	}
 
@@ -133,38 +91,6 @@ public abstract class SensorMeasurementBuilder<T extends SensorMeasurement, B ex
 
 
 	/**
-	* This function allows setting a value for creationDates
-	* @param creationDates desired value to be set
-	* @return Builder object with new value for creationDates
-	*/
-	public B creationDates(List<XMLGregorianCalendar> creationDates) {
-		getBuildingInstance().setCreationDates(creationDates);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List creationDates
-	* @param creationDate desired value to be added
-	* @return Builder object with new value for creationDates
-	*/
-	public B creationDate(XMLGregorianCalendar creationDate) {
-		getBuildingInstance().getCreationDates().add(creationDate);
-		return getSelf();
-	}
-
-
-	/**
-	* This function allows setting a value for hasReferences
-	* @param hasReferences desired value to be set
-	* @return Builder object with new value for hasReferences
-	*/
-	public B  {
-		getBuildingInstance().setHasReferences(hasReferences);
-		return getSelf();
-	}
-
-
-	/**
 	* This function allows setting a value for hasDatatypes
 	* @param hasDatatypes desired value to be set
 	* @return Builder object with new value for hasDatatypes
@@ -176,22 +102,12 @@ public abstract class SensorMeasurementBuilder<T extends SensorMeasurement, B ex
 
 
 	/**
-	* This function allows setting a value for wasGeneratedBies
-	* @param wasGeneratedBies desired value to be set
-	* @return Builder object with new value for wasGeneratedBies
+	* This function allows setting a value for hasReferences
+	* @param hasReferences desired value to be set
+	* @return Builder object with new value for hasReferences
 	*/
-	public B wasGeneratedBies(List<Agent> wasGeneratedBies) {
-		getBuildingInstance().setWasGeneratedBies(wasGeneratedBies);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List wasGeneratedBies
-	* @param wasGeneratedBy desired value to be added
-	* @return Builder object with new value for wasGeneratedBies
-	*/
-	public B wasGeneratedBy(Agent wasGeneratedBy) {
-		getBuildingInstance().getWasGeneratedBies().add(wasGeneratedBy);
+	public B  {
+		getBuildingInstance().setHasReferences(hasReferences);
 		return getSelf();
 	}
 
@@ -213,6 +129,90 @@ public abstract class SensorMeasurementBuilder<T extends SensorMeasurement, B ex
 	*/
 	public B hasSemanticExpression(ExpressionSemantic hasSemanticExpression) {
 		getBuildingInstance().getHasSemanticExpressions().add(hasSemanticExpression);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for hasValues
+	* @param hasValues desired value to be set
+	* @return Builder object with new value for hasValues
+	*/
+	public B hasValues(List<Value> hasValues) {
+		getBuildingInstance().setHasValues(hasValues);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List hasValues
+	* @param hasValue desired value to be added
+	* @return Builder object with new value for hasValues
+	*/
+	public B hasValue(Value hasValue) {
+		getBuildingInstance().getHasValues().add(hasValue);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for hasViews
+	* @param hasViews desired value to be set
+	* @return Builder object with new value for hasViews
+	*/
+	public B hasViews(List<View> hasViews) {
+		getBuildingInstance().setHasViews(hasViews);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List hasViews
+	* @param hasView desired value to be added
+	* @return Builder object with new value for hasViews
+	*/
+	public B hasView(View hasView) {
+		getBuildingInstance().getHasViews().add(hasView);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for inAccordanceWiths
+	* @param inAccordanceWiths desired value to be set
+	* @return Builder object with new value for inAccordanceWiths
+	*/
+	public B inAccordanceWiths(List<Standard> inAccordanceWiths) {
+		getBuildingInstance().setInAccordanceWiths(inAccordanceWiths);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List inAccordanceWiths
+	* @param inAccordanceWith desired value to be added
+	* @return Builder object with new value for inAccordanceWiths
+	*/
+	public B inAccordanceWith(Standard inAccordanceWith) {
+		getBuildingInstance().getInAccordanceWiths().add(inAccordanceWith);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for creationDates
+	* @param creationDates desired value to be set
+	* @return Builder object with new value for creationDates
+	*/
+	public B creationDates(List<XMLGregorianCalendar> creationDates) {
+		getBuildingInstance().setCreationDates(creationDates);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List creationDates
+	* @param creationDate desired value to be added
+	* @return Builder object with new value for creationDates
+	*/
+	public B creationDate(XMLGregorianCalendar creationDate) {
+		getBuildingInstance().getCreationDates().add(creationDate);
 		return getSelf();
 	}
 

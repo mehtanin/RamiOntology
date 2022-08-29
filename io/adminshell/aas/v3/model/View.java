@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,14 +44,52 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
-* Different views associated to the Administration Shell via the Submodels
+/** 
+* Different views associated to the Administration Shell via the Submodels 
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultView.class)
-})
-public interface View {
+@IRI("https://w3id.org/i40/rami#View")
+public enum View {
 
+	/** 
+	*/
+	@IRI("https://w3id.org/i40/rami#BusinessView")
+BUSINESS_VIEW,
+
+	/** 
+	* Applies to the constructive deployment of the asset for selection, design of building structure or assemblies ...
+Contains a structure classification system pursuant to IEC 81346.
+Applies to properties in respect of:
+1) physical dimensions and regarding start, processing and output values of the component.
+2) modular view of subcomponents or a asset structure and 3) inputs and outputs of different signal types.
+	*/
+	@IRI("https://w3id.org/i40/rami#Construction")
+CONSTRUCTION,
+
+	/** 
+	* Makes statements on the function pursuant to IEC 81346 and on the function of the asset components.
+Includes skills such as interpretation (?), commissioning, calculation (?) or diagnosis functions of the asset.
+Examples: current imbalance detection ability
+	*/
+	@IRI("https://w3id.org/i40/rami#Function")
+FUNCTION,
+
+	/** 
+	* Describes the capabilities of the asset regarding environmental conditions and positions of the asset.
+Describes the relationships capabilities of the asset or its parts or inputs and outputs with the linked assets.
+Examples: Degree of protection, working temperature, EMC characteristics, rated voltage, rated ultimate  
+short-circuit breaking capacity.
+	*/
+	@IRI("https://w3id.org/i40/rami#Location")
+LOCATION,
+
+	/** 
+	* Describes performance and behavioural characteristics. Examples: To allow a performance assessment and virtual commissioning of an overall system. Example: instantaneous short-circuit current setting
+	*/
+	@IRI("https://w3id.org/i40/rami#Performance")
+PERFORMANCE;
 
 }

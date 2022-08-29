@@ -50,7 +50,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 	 
 */
 
-@IRI("aas:Reference")
+@IRI("https://w3id.org/i40/rami#Reference")
 public class DefaultReference implements Reference {
 
 

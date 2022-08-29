@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,85 +44,73 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
+/** 
+* Objects may be known in the form of a type or of an instance. An object in the planning phase is known as a type 
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultAsset.class),
-	@KnownSubtypes.Type(value = Machine.class)
-})
-public interface Asset {
+@IRI("https://w3id.org/i40/rami#Asset")
+public enum Asset {
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#inventoryNumber
-	*
-	* @return Returns the List of Strings for the property inventoryNumbers.
+	/** 
 	*/
-	@IRI("https://w3id.org/i40/rami#inventoryNumber")
-	List<String> getInventoryNumbers();
+	@IRI("https://w3id.org/i40/rami#Asset1")
+ASSET1,
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#inventoryNumber
-	*
-	* @param inventoryNumbers desired value for the property inventoryNumbers.
+	/** 
 	*/
-	 void setInventoryNumbers (List<String> inventoryNumbers);
+	@IRI("https://w3id.org/i40/rami#Asset2")
+ASSET2,
 
-	/**
-	* A relation between any entities, in this case, the Asset can be part of other Asset(s).
-	*
-	* More information under http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf
-	*
-	* @return Returns the List of Assets for the property isPartOfs.
+	/** 
 	*/
+	@IRI("https://w3id.org/i40/rami#AssetMotorControl")
+ASSET_MOTOR_CONTROL;
+
+
+	
+	@IRI("http://xmlns.com/foaf/spec/image")
+	final public List<URI> getImages() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
 	@IRI("http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf")
-	List<Asset> getIsPartOfs();
+	final public List<Asset> getIsPartOfs() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	* A relation between any entities, in this case, the Asset can be part of other Asset(s).
-	*
-	* More information under http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf
-	*
-	* @param isPartOfs desired value for the property isPartOfs.
-	*/
-	 void setIsPartOfs (List<Asset> isPartOfs);
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#description
-	*
-	* @return Returns the List of Strings for the property descriptions.
-	*/
+	
 	@IRI("https://w3id.org/i40/rami#description")
-	List<String> getDescriptions();
+	final public List<String> getDescriptions() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#description
-	*
-	* @param descriptions desired value for the property descriptions.
-	*/
-	 void setDescriptions (List<String> descriptions);
 
-	/**
-	* Unique identification for the Asset.
-	*
-	* More information under https://w3id.org/i40/rami#hasAssetId
-	*
-	* @return Returns the List of Strings for the property hasAssetIds.
-	*/
+	
 	@IRI("https://w3id.org/i40/rami#hasAssetId")
-	List<String> getHasAssetIds();
+	final public List<String> getHasAssetIds() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	* Unique identification for the Asset.
-	*
-	* More information under https://w3id.org/i40/rami#hasAssetId
-	*
-	* @param hasAssetIds desired value for the property hasAssetIds.
-	*/
-	 void setHasAssetIds (List<String> hasAssetIds);
 
+	
+	@IRI("https://w3id.org/i40/rami#inventoryNumber")
+	final public List<String> getInventoryNumbers() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 }

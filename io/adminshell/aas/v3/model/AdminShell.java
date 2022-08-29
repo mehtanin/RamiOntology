@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,154 +44,108 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
+/**  
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultAdminShell.class)
-})
-public interface AdminShell {
+@IRI("https://w3id.org/i40/rami#AdminShell")
+public enum AdminShell {
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasComponentManager
-	*
-	* @return Returns the List of ComponentManagers for the property hasComponentManagers.
+	/** 
 	*/
-	@IRI("https://w3id.org/i40/rami#hasComponentManager")
-	List<ComponentManager> getHasComponentManagers();
+	@IRI("https://w3id.org/i40/rami#AdminShell1")
+ADMIN_SHELL1,
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasComponentManager
-	*
-	* @param hasComponentManagers desired value for the property hasComponentManagers.
+	/** 
 	*/
-	 void setHasComponentManagers (List<ComponentManager> hasComponentManagers);
+	@IRI("https://w3id.org/i40/rami#AdminShell2")
+ADMIN_SHELL2,
 
-	/**
-	* Connects the Admin Shell with the different RAMI4.0 Dimensions
-	*
-	* More information under https://w3id.org/i40/rami#isConnectedTo
-	*
-	* @return Returns the List of Dimensions for the property isConnectedTos.
+	/** 
 	*/
-	@IRI("https://w3id.org/i40/rami#isConnectedTo")
-	List<Dimension> getIsConnectedTos();
+	@IRI("https://w3id.org/i40/rami#AdminShellMotor")
+ADMIN_SHELL_MOTOR;
 
-	/**
-	* Connects the Admin Shell with the different RAMI4.0 Dimensions
-	*
-	* More information under https://w3id.org/i40/rami#isConnectedTo
-	*
-	* @param isConnectedTos desired value for the property isConnectedTos.
-	*/
-	 void setIsConnectedTos (List<Dimension> isConnectedTos);
 
-	/**
-	* Points to the Admin Shell to the Submodels that describe the Admin Shell of a given Asset
-	*
-	* More information under https://w3id.org/i40/rami#hasSubmodel
-	*
-	* @return Returns the List of Submodels for the property hasSubmodels.
-	*/
-	@IRI("https://w3id.org/i40/rami#hasSubmodel")
-	List<Submodel> getHasSubmodels();
-
-	/**
-	* Points to the Admin Shell to the Submodels that describe the Admin Shell of a given Asset
-	*
-	* More information under https://w3id.org/i40/rami#hasSubmodel
-	*
-	* @param hasSubmodels desired value for the property hasSubmodels.
-	*/
-	 void setHasSubmodels (List<Submodel> hasSubmodels);
-
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasData
-	*
-	* @return Returns the List of Submodels for the property hasDatas.
-	*/
-	@IRI("https://w3id.org/i40/rami#hasData")
-	List<Submodel> getHasDatas();
-
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasData
-	*
-	* @param hasDatas desired value for the property hasDatas.
-	*/
-	 void setHasDatas (List<Submodel> hasDatas);
-
-	/**
-	* Connect the Asset with the Administration Shell
-	*
-	* More information under https://w3id.org/i40/rami#describes
-	*
-	* @return Returns the List of Assets for the property describes.
-	*/
+	
 	@IRI("https://w3id.org/i40/rami#describes")
-	List<Asset> getDescribes();
+	final public List<Asset> getDescribes() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	* Connect the Asset with the Administration Shell
-	*
-	* More information under https://w3id.org/i40/rami#describes
-	*
-	* @param describes desired value for the property describes.
-	*/
-	 void setDescribes (List<Asset> describes);
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasManifest
-	*
-	* @return Returns the List of Manifests for the property hasManifests.
-	*/
+	
+	@IRI("https://w3id.org/i40/rami#hasComponentManager")
+	final public List<ComponentManager> getHasComponentManagers() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#hasData")
+	final public List<Submodel> getHasDatas() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
 	@IRI("https://w3id.org/i40/rami#hasManifest")
-	List<Manifest> getHasManifests();
+	final public List<Manifest> getHasManifests() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasManifest
-	*
-	* @param hasManifests desired value for the property hasManifests.
-	*/
-	 void setHasManifests (List<Manifest> hasManifests);
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#receivedAtTime
-	*
-	* @return Returns the List of XMLGregorianCalendars for the property receivedAtTimes.
-	*/
-	@IRI("https://w3id.org/i40/rami#receivedAtTime")
-	List<XMLGregorianCalendar> getReceivedAtTimes();
+	
+	@IRI("https://w3id.org/i40/rami#hasSubmodel")
+	final public List<Submodel> getHasSubmodels() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#receivedAtTime
-	*
-	* @param receivedAtTimes desired value for the property receivedAtTimes.
-	*/
-	 void setReceivedAtTimes (List<XMLGregorianCalendar> receivedAtTimes);
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasAdminShellId
-	*
-	* @return Returns the List of Strings for the property hasAdminShellIds.
-	*/
+	
+	@IRI("https://w3id.org/i40/rami#isConnectedTo")
+	final public List<Dimension> getIsConnectedTos() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
+	@IRI("https://w3id.org/i40/rami#isDescribedWith")
+	final public List<Standard> getIsDescribedWiths() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
+
+
+	
 	@IRI("https://w3id.org/i40/rami#hasAdminShellId")
-	List<String> getHasAdminShellIds();
+	final public List<String> getHasAdminShellIds() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	*
-	* More information under https://w3id.org/i40/rami#hasAdminShellId
-	*
-	* @param hasAdminShellIds desired value for the property hasAdminShellIds.
-	*/
-	 void setHasAdminShellIds (List<String> hasAdminShellIds);
 
+	
+	@IRI("https://w3id.org/i40/rami#receivedAtTime")
+	final public List<XMLGregorianCalendar> getReceivedAtTimes() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 }

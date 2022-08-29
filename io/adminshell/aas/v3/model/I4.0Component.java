@@ -8,7 +8,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
-
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -45,51 +44,42 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.JsonNode;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-/**
-* Globally uniquely identifiable participant with communication capability consisting of administration shell and asset within an I4.0 system. nSource: Industrie 4.0 – Begriffe/Terms, VDI Statusreport Industrie 4.0 (April 2017)
+/** 
+* Globally uniquely identifiable participant with communication capability consisting of administration shell and asset within an I4.0 system. 
+Source: Industrie 4.0 – Begriffe/Terms, VDI Statusreport Industrie 4.0 (April 2017) 
 */
-@KnownSubtypes({
-	@KnownSubtypes.Type(value = DefaultI4.0Component.class)
-})
-public interface I4.0Component {
+@IRI("https://w3id.org/i40/rami#I4.0Component")
+public enum I4.0Component {
 
-	/**
-	* Unique Identification of the Industry 4.0 component.
-	*
-	* More information under https://w3id.org/i40/rami#hasI40ComponentId
-	*
-	* @return Returns the List of Strings for the property hasI40ComponentIds.
+	/** 
 	*/
-	@IRI("https://w3id.org/i40/rami#hasI40ComponentId")
-	List<String> getHasI40ComponentIds();
+	@IRI("https://w3id.org/i40/rami#I4.0Component1")
+I4.0COMPONENT1,
 
-	/**
-	* Unique Identification of the Industry 4.0 component.
-	*
-	* More information under https://w3id.org/i40/rami#hasI40ComponentId
-	*
-	* @param hasI40ComponentIds desired value for the property hasI40ComponentIds.
+	/** 
 	*/
-	 void setHasI40ComponentIds (List<String> hasI40ComponentIds);
+	@IRI("https://w3id.org/i40/rami#I4.0Component2")
+I4.0COMPONENT2;
 
-	/**
-	* Points the I4.0 Component to the Administration Shell
-	*
-	* More information under https://w3id.org/i40/rami#containsAS
-	*
-	* @return Returns the List of AdminShells for the property containsASs.
-	*/
+
+	
 	@IRI("https://w3id.org/i40/rami#containsAS")
-	List<AdminShell> getContainsASs();
+	final public List<AdminShell> getContainsASs() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 
-	/**
-	* Points the I4.0 Component to the Administration Shell
-	*
-	* More information under https://w3id.org/i40/rami#containsAS
-	*
-	* @param containsASs desired value for the property containsASs.
-	*/
-	 void setContainsASs (List<AdminShell> containsASs);
 
+	
+	@IRI("https://w3id.org/i40/rami#hasI40ComponentId")
+	final public List<String> getHasI40ComponentIds() {
+		//not implemented for enums
+		throw new UnsupportedOperationException();
+	}
+	
 }
