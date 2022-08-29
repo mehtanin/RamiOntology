@@ -100,15 +100,15 @@ public class DefaultTransportInterface implements TransportInterface {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.wasGeneratedBies,
-			this.contributes,
-			this.hasDatatypes,
-			this.hasReferences,
-			this.hasSemanticExpressions,
+		return Objects.hash(this.hasViews,
 			this.hasValues,
-			this.hasViews,
 			this.inAccordanceWiths,
+			this.contributes,
 			this.creationDates,
+			this.hasReferences,
+			this.hasDatatypes,
+			this.wasGeneratedBies,
+			this.hasSemanticExpressions,
 			this.subModelIDs);
 	}
 
@@ -122,13 +122,13 @@ public class DefaultTransportInterface implements TransportInterface {
 			return false;
 		} else {
 			DefaultTransportInterface other = (DefaultTransportInterface) obj;
-			return Objects.equals(this.wasGeneratedBies, other.wasGeneratedBies) &&
-				Objects.equals(this.contributes, other.contributes) &&
-				Objects.equals(this.hasSemanticExpressions, other.hasSemanticExpressions) &&
+			return Objects.equals(this.hasViews, other.hasViews) &&
 				Objects.equals(this.hasValues, other.hasValues) &&
-				Objects.equals(this.hasViews, other.hasViews) &&
 				Objects.equals(this.inAccordanceWiths, other.inAccordanceWiths) &&
+				Objects.equals(this.contributes, other.contributes) &&
 				Objects.equals(this.creationDates, other.creationDates) &&
+				Objects.equals(this.wasGeneratedBies, other.wasGeneratedBies) &&
+				Objects.equals(this.hasSemanticExpressions, other.hasSemanticExpressions) &&
 				Objects.equals(this.subModelIDs, other.subModelIDs);
 		}
 	}
@@ -137,51 +137,13 @@ public class DefaultTransportInterface implements TransportInterface {
 	
 
 	@Override 
-	public List<Agent> getWasGeneratedBies() {
-		return wasGeneratedBies;
+	public List<View> getHasViews() {
+		return hasViews;
 	}
 	
 	@Override 
-	 public void setWasGeneratedBies (List<Agent> wasGeneratedBies) {
-		this.wasGeneratedBies = wasGeneratedBies;
-	}
-
-	@Override 
-	public List<Agent> getContributes() {
-		return contributes;
-	}
-	
-	@Override 
-	 public void setContributes (List<Agent> contributes) {
-		this.contributes = contributes;
-	}
-
-	@Override  {
-		return hasDatatypes;
-	}
-	
-	@Override 
-	 public void  {
-		this.hasDatatypes = hasDatatypes;
-	}
-
-	@Override  {
-		return hasReferences;
-	}
-	
-	@Override 
-	 public void  {
-		this.hasReferences = hasReferences;
-	}
-
-	@Override 
-	public List<ExpressionSemantic> getHasSemanticExpressions() {
-		return hasSemanticExpressions;
-	}
-	
-	@Override 
-	 public void setHasSemanticExpressions (List<ExpressionSemantic> hasSemanticExpressions) {
-		this.hasSemanticExpressions = hasSemanticExpressions;
+	 public void setHasViews (List<View> hasViews) {
+		this.hasViews = hasViews;
 	}
 
 	@Override 
@@ -195,16 +157,6 @@ public class DefaultTransportInterface implements TransportInterface {
 	}
 
 	@Override 
-	public List<View> getHasViews() {
-		return hasViews;
-	}
-	
-	@Override 
-	 public void setHasViews (List<View> hasViews) {
-		this.hasViews = hasViews;
-	}
-
-	@Override 
 	public List<Standard> getInAccordanceWiths() {
 		return inAccordanceWiths;
 	}
@@ -215,6 +167,16 @@ public class DefaultTransportInterface implements TransportInterface {
 	}
 
 	@Override 
+	public List<Agent> getContributes() {
+		return contributes;
+	}
+	
+	@Override 
+	 public void setContributes (List<Agent> contributes) {
+		this.contributes = contributes;
+	}
+
+	@Override 
 	public List<XMLGregorianCalendar> getCreationDates() {
 		return creationDates;
 	}
@@ -222,6 +184,44 @@ public class DefaultTransportInterface implements TransportInterface {
 	@Override 
 	 public void setCreationDates (List<XMLGregorianCalendar> creationDates) {
 		this.creationDates = creationDates;
+	}
+
+	@Override  {
+		return hasReferences;
+	}
+	
+	@Override 
+	 public void  {
+		this.hasReferences = hasReferences;
+	}
+
+	@Override  {
+		return hasDatatypes;
+	}
+	
+	@Override 
+	 public void  {
+		this.hasDatatypes = hasDatatypes;
+	}
+
+	@Override 
+	public List<Agent> getWasGeneratedBies() {
+		return wasGeneratedBies;
+	}
+	
+	@Override 
+	 public void setWasGeneratedBies (List<Agent> wasGeneratedBies) {
+		this.wasGeneratedBies = wasGeneratedBies;
+	}
+
+	@Override 
+	public List<ExpressionSemantic> getHasSemanticExpressions() {
+		return hasSemanticExpressions;
+	}
+	
+	@Override 
+	 public void setHasSemanticExpressions (List<ExpressionSemantic> hasSemanticExpressions) {
+		this.hasSemanticExpressions = hasSemanticExpressions;
 	}
 
 	@Override 

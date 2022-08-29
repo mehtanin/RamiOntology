@@ -8,6 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
+
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -44,109 +45,13 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.JsonNode;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-/** 
-* Describe the different types of Data related to the I4.0 Asset 
+/**
 */
-@IRI("https://w3id.org/i40/rami#Submodel")
-public enum Submodel {
-
-	/** 
-	*/
-	@IRI("https://w3id.org/i40/rami#EnergyEfficiency1")
-ENERGY_EFFICIENCY1,
-
-	/** 
-	*/
-	@IRI("https://w3id.org/i40/rami#EnergyEfficiency2")
-ENERGY_EFFICIENCY2;
+@KnownSubtypes({
+	@KnownSubtypes.Type(value = DefaultSubmodel.class)
+})
+public interface Submodel {
 
 
-	
-	@IRI("http://www.w3.org/ns/prov#wasGeneratedBy")
-	final public List<Agent> getWasGeneratedBies() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
-	@IRI("https://w3id.org/i40/rami#contributes")
-	final public List<Agent> getContributes() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	 {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	 {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
-	@IRI("https://w3id.org/i40/rami#hasSemanticExpression")
-	final public List<ExpressionSemantic> getHasSemanticExpressions() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
-	@IRI("https://w3id.org/i40/rami#hasValue")
-	final public List<Value> getHasValues() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
-	@IRI("https://w3id.org/i40/rami#hasView")
-	final public List<View> getHasViews() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
-	@IRI("https://w3id.org/i40/rami#inAccordanceWith")
-	final public List<Standard> getInAccordanceWiths() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
-	@IRI("https://w3id.org/i40/rami#creationDate")
-	final public List<XMLGregorianCalendar> getCreationDates() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
-	@IRI("https://w3id.org/i40/rami#subModelID")
-	final public List<String> getSubModelIDs() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
 }

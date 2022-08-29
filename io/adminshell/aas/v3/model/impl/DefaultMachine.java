@@ -69,11 +69,6 @@ public class DefaultMachine implements Machine {
 
 
 	
-	@IRI("http://xmlns.com/foaf/spec/image")
-	protected List<URI> images = new ArrayList<>();
-
-
-	
 	@IRI("https://w3id.org/i40/rami#description")
 	protected List<String> descriptions = new ArrayList<>();
 
@@ -98,14 +93,13 @@ public class DefaultMachine implements Machine {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.lats,
-			this.longs,
+		return Objects.hash(this.longs,
+			this.lats,
 			this.recordedTimes,
-			this.images,
+			this.inventoryNumbers,
 			this.isPartOfs,
 			this.descriptions,
-			this.hasAssetIds,
-			this.inventoryNumbers);
+			this.hasAssetIds);
 	}
 
 	@Override
@@ -118,29 +112,18 @@ public class DefaultMachine implements Machine {
 			return false;
 		} else {
 			DefaultMachine other = (DefaultMachine) obj;
-			return Objects.equals(this.lats, other.lats) &&
-				Objects.equals(this.longs, other.longs) &&
+			return Objects.equals(this.longs, other.longs) &&
+				Objects.equals(this.lats, other.lats) &&
 				Objects.equals(this.recordedTimes, other.recordedTimes) &&
-				Objects.equals(this.images, other.images) &&
+				Objects.equals(this.inventoryNumbers, other.inventoryNumbers) &&
 				Objects.equals(this.isPartOfs, other.isPartOfs) &&
 				Objects.equals(this.descriptions, other.descriptions) &&
-				Objects.equals(this.hasAssetIds, other.hasAssetIds) &&
-				Objects.equals(this.inventoryNumbers, other.inventoryNumbers);
+				Objects.equals(this.hasAssetIds, other.hasAssetIds);
 		}
 	}
 
 
 	
-	@Override 
-	public List<java.math.BigDecimal> getLats() {
-		return lats;
-	}
-	
-	@Override 
-	 public void setLats (List<java.math.BigDecimal> lats) {
-		this.lats = lats;
-	}
-
 	@Override 
 	public List<java.math.BigDecimal> getLongs() {
 		return longs;
@@ -149,6 +132,16 @@ public class DefaultMachine implements Machine {
 	@Override 
 	 public void setLongs (List<java.math.BigDecimal> longs) {
 		this.longs = longs;
+	}
+
+	@Override 
+	public List<java.math.BigDecimal> getLats() {
+		return lats;
+	}
+	
+	@Override 
+	 public void setLats (List<java.math.BigDecimal> lats) {
+		this.lats = lats;
 	}
 
 	@Override 
@@ -162,13 +155,13 @@ public class DefaultMachine implements Machine {
 	}
 
 	@Override 
-	public List<URI> getImages() {
-		return images;
+	public List<String> getInventoryNumbers() {
+		return inventoryNumbers;
 	}
 	
 	@Override 
-	 public void setImages (List<URI> images) {
-		this.images = images;
+	 public void setInventoryNumbers (List<String> inventoryNumbers) {
+		this.inventoryNumbers = inventoryNumbers;
 	}
 
 	@Override 
@@ -199,16 +192,6 @@ public class DefaultMachine implements Machine {
 	@Override 
 	 public void setHasAssetIds (List<String> hasAssetIds) {
 		this.hasAssetIds = hasAssetIds;
-	}
-
-	@Override 
-	public List<String> getInventoryNumbers() {
-		return inventoryNumbers;
-	}
-	
-	@Override 
-	 public void setInventoryNumbers (List<String> inventoryNumbers) {
-		this.inventoryNumbers = inventoryNumbers;
 	}
 /**
 	* This builder class can be used to construct a DefaultMachine bean.

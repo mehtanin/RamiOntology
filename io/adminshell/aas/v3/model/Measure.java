@@ -8,6 +8,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 package io.adminshell.aas.v3.model;
 
+
 import io.adminshell.aas.v3.model.*;
 import io.adminshell.aas.v3.model.impl.*;
 import io.adminshell.aas.v3.model.builder.*;
@@ -44,50 +45,29 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.JsonNode;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-/**  
+/**
 */
-@IRI("http://www.wurvoc.org/vocabularies/om-1.8/Measure")
-public enum Measure {
+@KnownSubtypes({
+	@KnownSubtypes.Type(value = DefaultMeasure.class)
+})
+public interface Measure {
 
-	/** 
+	/**
+	*
+	* More information under http://www.wurvoc.org/vocabularies/om-1.8/hasUnit
+	*
+	* @return Returns the List of Units for the property hasUnits.
 	*/
-	@IRI("https://w3id.org/i40/rami#BrakingResistanceMs")
-BRAKING_RESISTANCE_MS,
-
-	/** 
-	* Measuring the Energy Efficiency for I4.0 component 1 in kilowattHour.
-	*/
-	@IRI("https://w3id.org/i40/rami#MeasureEnergyEfficiency1")
-MEASURE_ENERGY_EFFICIENCY1,
-
-	/** 
-	* Measuring the Energy Efficiency for I4.0 component 2 in Kilojoule.
-	*/
-	@IRI("https://w3id.org/i40/rami#MeasureEnergyEfficiency2")
-MEASURE_ENERGY_EFFICIENCY2,
-
-	/** 
-	*/
-	@IRI("https://w3id.org/i40/rami#maxOutputFrequencyMs")
-MAX_OUTPUT_FREQUENCY_MS;
-
-
-	 {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
-
-
-	
 	@IRI("http://www.wurvoc.org/vocabularies/om-1.8/hasUnit")
-	final public List<Unit> getHasUnits() {
-		//not implemented for enums
-		throw new UnsupportedOperationException();
-	}
-	
+	List<Unit> getHasUnits();
+
+	/**
+	*
+	* More information under http://www.wurvoc.org/vocabularies/om-1.8/hasUnit
+	*
+	* @param hasUnits desired value for the property hasUnits.
+	*/
+	 void setHasUnits (List<Unit> hasUnits);
+
 }

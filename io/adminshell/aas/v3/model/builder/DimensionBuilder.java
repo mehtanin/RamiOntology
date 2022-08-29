@@ -45,5 +45,5 @@ import java.nio.charset.StandardCharsets;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public abstract class SensorOutputBuilder<T extends SensorOutput, B extends SensorOutputBuilder<T, B>> extends ExtendableBuilder<T, B> {
+public abstract class DimensionBuilder<T extends Dimension, B extends DimensionBuilder<T, B>> extends ExtendableBuilder<T, B> {
 }

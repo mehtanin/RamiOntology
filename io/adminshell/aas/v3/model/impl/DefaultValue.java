@@ -48,8 +48,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /** 
 	* Default implementation of package io.adminshell.aas.v3.model.Value
 	
-* Current value that can be specified through an instanced submodel (for 
-instance in station 2) or through the asset, for example. 
+* Current value that can be specified through an instanced submodel (for ninstance in station 2) or through the asset, for example. 
 */
 
 @IRI("https://w3id.org/i40/rami#Value")

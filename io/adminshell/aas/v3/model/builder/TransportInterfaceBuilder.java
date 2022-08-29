@@ -49,86 +49,22 @@ public abstract class TransportInterfaceBuilder<T extends TransportInterface, B 
 
 
 	/**
-	* This function allows setting a value for wasGeneratedBies
-	* @param wasGeneratedBies desired value to be set
-	* @return Builder object with new value for wasGeneratedBies
+	* This function allows setting a value for hasViews
+	* @param hasViews desired value to be set
+	* @return Builder object with new value for hasViews
 	*/
-	public B wasGeneratedBies(List<Agent> wasGeneratedBies) {
-		getBuildingInstance().setWasGeneratedBies(wasGeneratedBies);
+	public B hasViews(List<View> hasViews) {
+		getBuildingInstance().setHasViews(hasViews);
 		return getSelf();
 	}
 
 	/**
-	* This function allows adding a value to the List wasGeneratedBies
-	* @param wasGeneratedBy desired value to be added
-	* @return Builder object with new value for wasGeneratedBies
+	* This function allows adding a value to the List hasViews
+	* @param hasView desired value to be added
+	* @return Builder object with new value for hasViews
 	*/
-	public B wasGeneratedBy(Agent wasGeneratedBy) {
-		getBuildingInstance().getWasGeneratedBies().add(wasGeneratedBy);
-		return getSelf();
-	}
-
-
-	/**
-	* This function allows setting a value for contributes
-	* @param contributes desired value to be set
-	* @return Builder object with new value for contributes
-	*/
-	public B contributes(List<Agent> contributes) {
-		getBuildingInstance().setContributes(contributes);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List contributes
-	* @param contributes desired value to be added
-	* @return Builder object with new value for contributes
-	*/
-	public B contributes(Agent contributes) {
-		getBuildingInstance().getContributes().add(contributes);
-		return getSelf();
-	}
-
-
-	/**
-	* This function allows setting a value for hasDatatypes
-	* @param hasDatatypes desired value to be set
-	* @return Builder object with new value for hasDatatypes
-	*/
-	public B  {
-		getBuildingInstance().setHasDatatypes(hasDatatypes);
-		return getSelf();
-	}
-
-
-	/**
-	* This function allows setting a value for hasReferences
-	* @param hasReferences desired value to be set
-	* @return Builder object with new value for hasReferences
-	*/
-	public B  {
-		getBuildingInstance().setHasReferences(hasReferences);
-		return getSelf();
-	}
-
-
-	/**
-	* This function allows setting a value for hasSemanticExpressions
-	* @param hasSemanticExpressions desired value to be set
-	* @return Builder object with new value for hasSemanticExpressions
-	*/
-	public B hasSemanticExpressions(List<ExpressionSemantic> hasSemanticExpressions) {
-		getBuildingInstance().setHasSemanticExpressions(hasSemanticExpressions);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List hasSemanticExpressions
-	* @param hasSemanticExpression desired value to be added
-	* @return Builder object with new value for hasSemanticExpressions
-	*/
-	public B hasSemanticExpression(ExpressionSemantic hasSemanticExpression) {
-		getBuildingInstance().getHasSemanticExpressions().add(hasSemanticExpression);
+	public B hasView(View hasView) {
+		getBuildingInstance().getHasViews().add(hasView);
 		return getSelf();
 	}
 
@@ -155,27 +91,6 @@ public abstract class TransportInterfaceBuilder<T extends TransportInterface, B 
 
 
 	/**
-	* This function allows setting a value for hasViews
-	* @param hasViews desired value to be set
-	* @return Builder object with new value for hasViews
-	*/
-	public B hasViews(List<View> hasViews) {
-		getBuildingInstance().setHasViews(hasViews);
-		return getSelf();
-	}
-
-	/**
-	* This function allows adding a value to the List hasViews
-	* @param hasView desired value to be added
-	* @return Builder object with new value for hasViews
-	*/
-	public B hasView(View hasView) {
-		getBuildingInstance().getHasViews().add(hasView);
-		return getSelf();
-	}
-
-
-	/**
 	* This function allows setting a value for inAccordanceWiths
 	* @param inAccordanceWiths desired value to be set
 	* @return Builder object with new value for inAccordanceWiths
@@ -197,6 +112,27 @@ public abstract class TransportInterfaceBuilder<T extends TransportInterface, B 
 
 
 	/**
+	* This function allows setting a value for contributes
+	* @param contributes desired value to be set
+	* @return Builder object with new value for contributes
+	*/
+	public B contributes(List<Agent> contributes) {
+		getBuildingInstance().setContributes(contributes);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List contributes
+	* @param contributes desired value to be added
+	* @return Builder object with new value for contributes
+	*/
+	public B contributes(Agent contributes) {
+		getBuildingInstance().getContributes().add(contributes);
+		return getSelf();
+	}
+
+
+	/**
 	* This function allows setting a value for creationDates
 	* @param creationDates desired value to be set
 	* @return Builder object with new value for creationDates
@@ -213,6 +149,70 @@ public abstract class TransportInterfaceBuilder<T extends TransportInterface, B 
 	*/
 	public B creationDate(XMLGregorianCalendar creationDate) {
 		getBuildingInstance().getCreationDates().add(creationDate);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for hasReferences
+	* @param hasReferences desired value to be set
+	* @return Builder object with new value for hasReferences
+	*/
+	public B  {
+		getBuildingInstance().setHasReferences(hasReferences);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for hasDatatypes
+	* @param hasDatatypes desired value to be set
+	* @return Builder object with new value for hasDatatypes
+	*/
+	public B  {
+		getBuildingInstance().setHasDatatypes(hasDatatypes);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for wasGeneratedBies
+	* @param wasGeneratedBies desired value to be set
+	* @return Builder object with new value for wasGeneratedBies
+	*/
+	public B wasGeneratedBies(List<Agent> wasGeneratedBies) {
+		getBuildingInstance().setWasGeneratedBies(wasGeneratedBies);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List wasGeneratedBies
+	* @param wasGeneratedBy desired value to be added
+	* @return Builder object with new value for wasGeneratedBies
+	*/
+	public B wasGeneratedBy(Agent wasGeneratedBy) {
+		getBuildingInstance().getWasGeneratedBies().add(wasGeneratedBy);
+		return getSelf();
+	}
+
+
+	/**
+	* This function allows setting a value for hasSemanticExpressions
+	* @param hasSemanticExpressions desired value to be set
+	* @return Builder object with new value for hasSemanticExpressions
+	*/
+	public B hasSemanticExpressions(List<ExpressionSemantic> hasSemanticExpressions) {
+		getBuildingInstance().setHasSemanticExpressions(hasSemanticExpressions);
+		return getSelf();
+	}
+
+	/**
+	* This function allows adding a value to the List hasSemanticExpressions
+	* @param hasSemanticExpression desired value to be added
+	* @return Builder object with new value for hasSemanticExpressions
+	*/
+	public B hasSemanticExpression(ExpressionSemantic hasSemanticExpression) {
+		getBuildingInstance().getHasSemanticExpressions().add(hasSemanticExpression);
 		return getSelf();
 	}
 

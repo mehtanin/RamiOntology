@@ -46,15 +46,15 @@ import java.nio.charset.StandardCharsets;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /** 
-	* Default implementation of package io.adminshell.aas.v3.model.SensorOutput
+	* Default implementation of package io.adminshell.aas.v3.model.Identifier
 	 
 */
 
-@IRI("http://purl.oclc.org/NET/ssnx/ssn#SensorOutput")
-public class DefaultSensorOutput implements SensorOutput {
+@IRI("aas:Identifier")
+public class DefaultIdentifier implements Identifier {
 
 
-	public DefaultSensorOutput() {
+	public DefaultIdentifier() {
 	}
 
 	@Override
@@ -75,9 +75,9 @@ public class DefaultSensorOutput implements SensorOutput {
 	}
 
 /**
-	* This builder class can be used to construct a DefaultSensorOutput bean.
+	* This builder class can be used to construct a DefaultIdentifier bean.
 */
-	public static class Builder extends SensorOutputBuilder<DefaultSensorOutput, Builder> {
+	public static class Builder extends IdentifierBuilder<DefaultIdentifier, Builder> {
 
 		@Override
 		protected Builder getSelf() {
@@ -85,8 +85,8 @@ public class DefaultSensorOutput implements SensorOutput {
 	}
 
 		@Override
-		protected DefaultSensorOutput newBuildingInstance() {
-			return new DefaultSensorOutput();
+		protected DefaultIdentifier newBuildingInstance() {
+			return new DefaultIdentifier();
 		}
 	}
 }

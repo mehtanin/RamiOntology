@@ -54,25 +54,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public interface Machine {
 
 	/**
-	* The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid).
-	*
-	* More information under http://www.w3.org/2003/01/geo/wgs84_pos#lat
-	*
-	* @return Returns the List of java.math.BigDecimals for the property lats.
-	*/
-	@IRI("http://www.w3.org/2003/01/geo/wgs84_pos#lat")
-	List<java.math.BigDecimal> getLats();
-
-	/**
-	* The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid).
-	*
-	* More information under http://www.w3.org/2003/01/geo/wgs84_pos#lat
-	*
-	* @param lats desired value for the property lats.
-	*/
-	 void setLats (List<java.math.BigDecimal> lats);
-
-	/**
 	* The WGS84 longitude of a SpatialThing (decimal degrees).
 	*
 	* More information under http://www.w3.org/2003/01/geo/wgs84_pos#long
@@ -90,6 +71,25 @@ public interface Machine {
 	* @param longs desired value for the property longs.
 	*/
 	 void setLongs (List<java.math.BigDecimal> longs);
+
+	/**
+	* The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid).
+	*
+	* More information under http://www.w3.org/2003/01/geo/wgs84_pos#lat
+	*
+	* @return Returns the List of java.math.BigDecimals for the property lats.
+	*/
+	@IRI("http://www.w3.org/2003/01/geo/wgs84_pos#lat")
+	List<java.math.BigDecimal> getLats();
+
+	/**
+	* The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid).
+	*
+	* More information under http://www.w3.org/2003/01/geo/wgs84_pos#lat
+	*
+	* @param lats desired value for the property lats.
+	*/
+	 void setLats (List<java.math.BigDecimal> lats);
 
 	/**
 	* Recorded Time for a Machine
