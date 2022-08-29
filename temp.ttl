@@ -1,0 +1,23 @@
+@prefix vocoregVocab: <https://vococeg.fraunhofer.de/vocab#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+<https://vocol.vaas.fraunhofer.de/ns> rdf:type owl:Ontology ;
+                                       dc:creator "VoCoReg Team"     ;
+                                       rdfs:comment "Generic VAAS Ontology (vaasonto) - an ontology designed to manage and describe instance of VAAS."@en ;
+                                       rdfs:label "vaaso Ontology"@en ;
+                                       rdfs:seeAlso "https://vocol.vaas.fraunhofer.de/"^^xsd:string ;
+                                       owl:versionInfo "0.1"^^xsd:string .
+
+
+###  https://vocol.vaas.fraunhofer.de/ns#Version
+:Attachment rdf:type owl:Class ;
+            rdfs:comment "Version of the Ontology."@en ;
+            rdfs:label "Version"@en .
