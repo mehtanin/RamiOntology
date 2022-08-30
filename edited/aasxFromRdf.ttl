@@ -385,7 +385,7 @@ iec61360:StringTranslatable
         <https://admin-shell.io/aas/3/0/RC01/Key/type>
                 <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/ConceptDescription> ;
         <https://admin-shell.io/aas/3/0/RC01/Key/value>
-                "0173-1#02-BAA120#008" .
+                "0173-1#02-BAA120#008999" .
 
 <https://admin-shell.io/autogen/DefaultReference/d3b0b844-e830-4d13-9912-d646c58c9a38>
         rdf:type  aas:Reference ;
