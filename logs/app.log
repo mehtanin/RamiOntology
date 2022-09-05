@@ -1,0 +1,32 @@
+2022-09-05 10:37:09,165 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main]             _____                                                       
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main]            |___ /                                                       
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main]  ______      |_ \    _____ _______     _____                 _          
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] |  ____/\   ___) | / ____|__   __|    / ____|               (_)         
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] | |__ /  \ |____/ | (___    | |      | (___   ___ _ ____   ___  ___ ___ 
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] |  __/ /\ \        \___ \   | |       \___ \ / _ \ '__\ \ / / |/ __/ _ \
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] | | / ____ \       ____) |  | |       ____) |  __/ |   \ V /| | (_|  __/
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] |_|/_/    \_\     |_____/   |_|      |_____/ \___|_|    \_/ |_|\___\___|
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] 
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] -------------------------------------------------------------------------
+2022-09-05 10:37:09,166 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] Config: empty (default)
+2022-09-05 10:37:09,171 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] Model: /home/mrashikh/Workspace/repoFolder/RamiNew/main/../../../vocol/helper/tools/FAAAST-Service/aasenvironment.aasx (CLI)
+2022-09-05 10:37:11,220 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] Starting FA³ST Service...
+2022-09-05 10:37:11,221 DEBUG de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] Using configuration file: 
+2022-09-05 10:37:11,239 DEBUG de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] {
+  "core" : {
+    "requestHandlerThreadPoolSize" : 2
+  },
+  "endpoints" : [ {
+    "@class" : "de.fraunhofer.iosb.ilt.faaast.service.endpoint.http.HttpEndpoint",
+    "port" : 4498
+  } ],
+  "persistence" : {
+    "@class" : "de.fraunhofer.iosb.ilt.faaast.service.persistence.memory.PersistenceInMemory"
+  },
+  "messageBus" : {
+    "@class" : "de.fraunhofer.iosb.ilt.faaast.service.messagebus.internal.MessageBusInternal"
+  }
+}
+2022-09-05 10:37:11,980 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] FA³ST Service successfully started
+2022-09-05 10:37:11,981 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] HTTP endpoint available on port 4498
+2022-09-05 10:37:11,981 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] Press CTRL + C to stop
