@@ -30,3 +30,6 @@
 2022-09-05 10:22:34,167 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] FA³ST Service successfully started
 2022-09-05 10:22:34,168 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] HTTP endpoint available on port 4498
 2022-09-05 10:22:34,168 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] Press CTRL + C to stop
+2022-09-05 10:25:10,532 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] Shutting down FA³ST Service...
+2022-09-05 10:25:12,542 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [main] FA³ST Service successfully shut down
+2022-09-05 10:25:12,543 INFO de.fraunhofer.iosb.ilt.faaast.service.starter.App [Thread-0] Goodbye!
