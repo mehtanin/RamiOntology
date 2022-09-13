@@ -1,0 +1,688 @@
+@prefix :             <https://w3id.org/i40/rami#> .
+@prefix DUL:          <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix aas:          <https://admin-shell.io/aas/3/0/RC01/> .
+@prefix ai:           <http://www.ai4eu.eu/ontologies/core#> .
+@prefix cat:          <http://w3id.org/mobids/data-categories#> .
+@prefix catd:         <http://w3id.org/mobids/data-categories-detail#> .
+@prefix cso:          <https://cso.kmi.open.ac.uk/topics/> .
+@prefix dash:         <http://datashapes.org/dash#> .
+@prefix dbpedia:      <http://dbpedia.org/ontology/> .
+@prefix dc:           <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:         <http://www.w3.org/ns/dcat#> .
+@prefix dct:          <http://purl.org/dc/terms/> .
+@prefix dcterms:      <http://purl.org/dc/terms/> .
+@prefix dul:          <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix edu:          <https://schema.edu.ee/> .
+@prefix foaf:         <http://xmlns.com/foaf/spec/> .
+@prefix geo:          <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix grddl:        <http://www.w3.org/2003/g/data-view#> .
+@prefix ids:          <https://w3id.org/idsa/core#> .
+@prefix idsm:         <https://w3id.org/idsa/metamodel/> .
+@prefix iec61360:     <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/> .
+@prefix lgdo:         <http://linkedgeodata.org/ontology/> .
+@prefix lsc:          <http://linkedscience.org/lsc/> .
+@prefix mobids:       <http://w3id.org/mobids#> .
+@prefix ns_transport: <file://www.ibm.com/WSRR/Transport#> .
+@prefix obda:         <https://w3id.org/obda/vocabulary#> .
+@prefix om:           <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix owl:          <http://www.w3.org/2002/07/owl#> .
+@prefix phys_unit:    <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationPhysicalUnit/3/0/RC01/> .
+@prefix plo:          <http://purl.org/net/> .
+@prefix prov:         <http://www.w3.org/ns/prov#> .
+@prefix rami:         <https://w3id.org/i40/rami#> .
+@prefix rdf:          <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:       <http://schema.org/> .
+@prefix sh:           <http://www.w3.org/ns/shacl#> .
+@prefix sim:          <http://purl.org/ontology/similarity/> .
+@prefix skos:         <http://www.w3.org/2004/02/skos/core#> .
+@prefix ssn:          <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix sto:          <https://w3id.org/i40/sto#> .
+@prefix transit:      <http://vocab.org/transit/terms/> .
+@prefix vann:         <http://purl.org/vocab/vann/> .
+@prefix vcard:        <http://www.w3.org/2006/vcard/ns#> .
+@prefix void:         <http://rdfs.org/ns/void#> .
+@prefix wsrr:         <http://www.ibm.com/xmlns/prod/serviceregistry/6/1/model#> .
+@prefix xml:          <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:          <http://www.w3.org/2001/XMLSchema#> .
+
+<https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/Asset>
+        rdf:type  aas:KeyElements .
+
+<https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/ConceptDescription>
+        rdf:type  aas:KeyElements .
+
+<https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/Submodel>
+        rdf:type  aas:KeyElements .
+
+iec61360:RealMeasure  rdf:type  iec61360:DataTypeIEC61360 .
+
+<https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance>
+        rdf:type  aas:ModelingKind .
+
+iec61360:String  rdf:type  iec61360:DataTypeIEC61360 .
+
+iec61360:StringTranslatable
+        rdf:type  iec61360:DataTypeIEC61360 .
+
+<https://admin-shell.io/aas/3/0/RC01/IdentifierType/Irdi>
+        rdf:type  aas:IdentifierType , aas:KeyType .
+
+<https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri>
+        rdf:type  aas:IdentifierType , aas:KeyType .
+
+<https://admin-shell.io/aas/3/0/RC01/KeyElements/GlobalReference>
+        rdf:type  aas:KeyElements .
+
+<https://admin-shell.io/aas/3/0/RC01/AssetKind/Instance>
+        rdf:type  aas:AssetKind .
+
+<https://admin-shell.io/autogen/DefaultFile/8601be49-9842-454e-818c-59096879c706>
+        rdf:type  aas:File ;
+        <https://admin-shell.io/aas/3/0/RC01/File/mimeType>
+                "image/png" ;
+        <https://admin-shell.io/aas/3/0/RC01/File/value>
+                "https://github.com/admin-shell/io/blob/master/verwaltungsschale-detail-part1.png" ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "thumbnail" .
+
+<https://admin-shell.io/autogen/DefaultReference/fbed6912-141e-4ce9-a2ed-b76c052a5e3e>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/71e9319b-e73e-46b8-be9f-3f94b17951f0> .
+
+<https://admin-shell.io/autogen/DefaultIdentifierKeyValuePair/c5c5e763-baef-4f39-9a1c-f6c1bbc137ee>
+        rdf:type  aas:IdentifierKeyValuePair ;
+        <https://admin-shell.io/aas/3/0/RC01/IdentifierKeyValuePair/externalSubjectId>
+                <https://admin-shell.io/autogen/DefaultReference/62234f2d-a6aa-4d3f-b532-f93b68468cfa> ;
+        <https://admin-shell.io/aas/3/0/RC01/IdentifierKeyValuePair/key>
+                "EquipmentID" ;
+        <https://admin-shell.io/aas/3/0/RC01/IdentifierKeyValuePair/value>
+                "538fd1b3-f99f-4a52-9c75-72e9fa921270" .
+
+<https://admin-shell.io/autogen/DefaultIdentifierKeyValuePair/2039e620-54c6-458a-88ed-fed95db4c7b5>
+        rdf:type  aas:IdentifierKeyValuePair ;
+        <https://admin-shell.io/aas/3/0/RC01/IdentifierKeyValuePair/externalSubjectId>
+                <https://admin-shell.io/autogen/DefaultReference/67c15045-36d5-4ccd-923a-49ff44831d98> ;
+        <https://admin-shell.io/aas/3/0/RC01/IdentifierKeyValuePair/key>
+                "DeviceID" ;
+        <https://admin-shell.io/aas/3/0/RC01/IdentifierKeyValuePair/value>
+                "QjYgPggjwkiHk4RrQiYSLg==" .
+
+<https://admin-shell.io/autogen/DefaultKey/fa4510f0-eda2-41d9-a940-39adca0267a0>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Irdi> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/KeyElements/GlobalReference> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "0173-1#05-AAA650#002" .
+
+<https://admin-shell.io/autogen/DefaultSubmodel/67ddb5a7-8cf6-457f-9ab1-51d019fe7b79>
+        rdf:type  aas:Submodel ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/ce58f9ad-1ff5-4755-bdb0-6b42c679ca87> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "OperationalData" ;
+        <https://admin-shell.io/aas/3/0/RC01/Submodel/submodelElement>
+                <https://admin-shell.io/autogen/DefaultProperty/35b8cdad-5b8b-4922-9010-1a088e8e67da> .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/ce58f9ad-1ff5-4755-bdb0-6b42c679ca87>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "http://i40.customer.com/instance/1/1/AC69B1CB44F07935" .
+
+<https://admin-shell.io/autogen/DefaultProperty/35b8cdad-5b8b-4922-9010-1a088e8e67da>
+        rdf:type  aas:Property ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/ce2302b0-7d5b-4894-bf94-095ff281a567> ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/value>
+                "4370" ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/valueType>
+                "integer" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/category>
+                "VARIABLE" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "RotationSpeed" .
+
+<https://admin-shell.io/autogen/DefaultConceptDescription/727041b2-3223-43b6-a9ef-62c1fe361488>
+        rdf:type  aas:ConceptDescription ;
+        <https://admin-shell.io/aas/3/0/RC01/HasDataSpecification/embeddedDataSpecification>
+                <https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/2ece31ba-cec7-4eaf-bcd2-715b966c9305> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/b3f37e6d-7c2c-4b2c-8b15-1f9e76070ab6> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "Document" .
+
+<https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/2ece31ba-cec7-4eaf-bcd2-715b966c9305>
+        rdf:type  aas:EmbeddedDataSpecification ;
+        <https://admin-shell.io/aas/3/0/RC01/EmbeddedDataSpecification/dataSpecificationContent>
+                <https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/57052174-8806-443d-bf27-99cf2b5fa28d> .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/b3f37e6d-7c2c-4b2c-8b15-1f9e76070ab6>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Document" .
+
+<https://admin-shell.io/autogen/DefaultKey/c37ea668-a4de-4c1e-a093-43e514966045>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/ConceptDescription> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Document" .
+
+<https://admin-shell.io/autogen/DefaultReference/67c15045-36d5-4ccd-923a-49ff44831d98>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/37e7a7ad-c78e-424b-b56c-d441c33d0736> .
+
+<https://admin-shell.io/autogen/DefaultKey/837e054a-7a91-400b-bfbe-c371ab3c9802>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Irdi> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/KeyElements/GlobalReference> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "0173-1#01-AFZ615#016" .
+
+<https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/dee3d20a-0cac-4b8c-bf79-2e5f8e8fc5b6>
+        rdf:type  aas:EmbeddedDataSpecification ;
+        <https://admin-shell.io/aas/3/0/RC01/EmbeddedDataSpecification/dataSpecificationContent>
+                <https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/dfe5b03b-bdc5-4549-9899-1ce67d1b6d46> .
+
+<https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/dfe5b03b-bdc5-4549-9899-1ce67d1b6d46>
+        rdf:type  iec61360:DataSpecificationIEC61360 ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/dataType>
+                iec61360:StringTranslatable ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/definition>
+                "SprachabhängigerTiteldesDokuments."@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/preferredName>
+                "Title"@en , "Titel"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/shortName>
+                "Title"@en , "Titel"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/sourceOfDefinition>
+                "" ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/unit>
+                "" .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/9fcfbdd4-bb7e-4b1d-b3ee-5765a1f44d10>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "http://i40.customer.com/type/1/1/7A7104BDAB57E184" .
+
+<https://admin-shell.io/autogen/DefaultReference/ce2302b0-7d5b-4894-bf94-095ff281a567>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/f20df93e-d6fe-418d-bb8f-992b2b7e11a1> .
+
+<https://admin-shell.io/autogen/DefaultKey/f20df93e-d6fe-418d-bb8f-992b2b7e11a1>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/ConceptDescription> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "http://customer.com/cd/1/1/18EBD56F6B43D895Test" .
+
+<https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/57052174-8806-443d-bf27-99cf2b5fa28d>
+        rdf:type  iec61360:DataSpecificationIEC61360 ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/dataType>
+                iec61360:String ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/definition>
+                "Feste und geordnete Menge von für die Verwendung durch Personen bestimmte Informationen, die verwaltet und als Einheit zwischen Benutzern und System ausgetauscht werden kann."@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/shortName>
+                "Document"@en , "Dokument"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/sourceOfDefinition>
+                "[ISO15519-1:2010]" ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/unit>
+                "" .
+
+<https://admin-shell.io/autogen/DefaultReference/cd37dc17-80cd-4253-b2e7-799bc948490a>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/837e054a-7a91-400b-bfbe-c371ab3c9802> .
+
+<https://admin-shell.io/autogen/DefaultConceptDescription/41e6e445-9cc5-4a43-a176-6f7a1f7ba4bf>
+        rdf:type  aas:ConceptDescription ;
+        <https://admin-shell.io/aas/3/0/RC01/HasDataSpecification/embeddedDataSpecification>
+                <https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/d28f3ff6-d906-4cdb-bfbd-7c2d5e5eb9ad> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/administration>
+                <https://admin-shell.io/autogen/DefaultAdministrativeInformation/52e8cec2-318f-4c3e-9089-b88a17e2713e> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/9387ebd9-3bb2-4b19-8086-db31970232dd> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/category>
+                "PROPERTY" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "MaxRotationSpeed" .
+
+<https://admin-shell.io/autogen/DefaultConceptDescription/2141e4c7-13de-4f45-bc01-3ade0fd4138a>
+        rdf:type  aas:ConceptDescription ;
+        <https://admin-shell.io/aas/3/0/RC01/HasDataSpecification/embeddedDataSpecification>
+                <https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/dee3d20a-0cac-4b8c-bf79-2e5f8e8fc5b6> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/8f88b42f-1e39-416c-bf4e-30714d02b2fa> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "Title" .
+
+<https://admin-shell.io/autogen/DefaultConceptDescription/6ab70bcd-3a67-47b8-9967-fdedb5bd7ac2>
+        rdf:type  aas:ConceptDescription ;
+        <https://admin-shell.io/aas/3/0/RC01/HasDataSpecification/embeddedDataSpecification>
+                <https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/c3016e39-fe01-4273-a96b-67ebf4b4053e> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/596d60ea-ae59-4f49-9d6f-e5a82def5605> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "DigitalFile" .
+
+<https://admin-shell.io/autogen/DefaultSubmodel/93b29dd6-b4e8-417a-b4be-ef5f8b81e4d3>
+        rdf:type  aas:Submodel ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/cd37dc17-80cd-4253-b2e7-799bc948490a> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/9fcfbdd4-bb7e-4b1d-b3ee-5765a1f44d10> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "TechnicalData" ;
+        <https://admin-shell.io/aas/3/0/RC01/Submodel/submodelElement>
+                <https://admin-shell.io/autogen/DefaultProperty/e2bf171a-5dd5-47a0-b3fa-2f66482b77c7> .
+
+<https://admin-shell.io/autogen/DefaultReference/8d09299a-86c1-47b3-8766-fa2c4efb768f>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/fa4510f0-eda2-41d9-a940-39adca0267a0> .
+
+<https://admin-shell.io/autogen/DefaultReference/e9ac30e0-b5e3-4a49-9ae0-2910c9577159>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/745c156e-aba6-420c-b61d-2a8dc6bdd324> .
+
+<https://admin-shell.io/autogen/DefaultKey/745c156e-aba6-420c-b61d-2a8dc6bdd324>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/ConceptDescription> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "www.vdi2770.com/blatt1/Entwurf/Okt18/cd/StoredDocumentRepresentation/DigitalFile" .
+
+<https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/c3016e39-fe01-4273-a96b-67ebf4b4053e>
+        rdf:type  aas:EmbeddedDataSpecification ;
+        <https://admin-shell.io/aas/3/0/RC01/EmbeddedDataSpecification/dataSpecificationContent>
+                <https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/f073b551-19f4-4ad5-a86d-ca32c7067664> .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/596d60ea-ae59-4f49-9d6f-e5a82def5605>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "www.vdi2770.com/blatt1/Entwurf/Okt18/cd/StoredDocumentRepresentation/DigitalFile" .
+
+<https://admin-shell.io/autogen/DefaultReference/88ded045-3a63-4287-9471-9829566687b3>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/c37ea668-a4de-4c1e-a093-43e514966045> .
+
+<https://admin-shell.io/autogen/DefaultProperty/36561935-99ee-49d5-9541-984db9528855>
+        rdf:type  aas:Property ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/7dbf0543-e668-46b4-8e55-bf89e96b8756> ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/value>
+                "PascalsFile" ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/valueType>
+                "langString" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "Title" .
+
+<https://admin-shell.io/autogen/DefaultFile/32511a48-5bf9-4a1b-be17-27d46085a746>
+        rdf:type  aas:File ;
+        <https://admin-shell.io/aas/3/0/RC01/File/mimeType>
+                "application/pdf" ;
+        <https://admin-shell.io/aas/3/0/RC01/File/value>
+                "/aasx/PascalsFile.pdf" ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/e9ac30e0-b5e3-4a49-9ae0-2910c9577159> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "DigitalFile_PDF" .
+
+<https://admin-shell.io/autogen/DefaultProperty/3567777d-da96-446b-aab5-0afac52048eb>
+        rdf:type  aas:Property ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/7dbf0543-e668-46b4-8e55-bf89e96b8756> ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/value>
+                "OperatingManual" ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/valueType>
+                "langString" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "Title" .
+
+<https://admin-shell.io/autogen/DefaultFile/93b8bea7-1f2c-40a7-89b8-e8c6b43023f6>
+        rdf:type  aas:File ;
+        <https://admin-shell.io/aas/3/0/RC01/File/mimeType>
+                "application/pdf" ;
+        <https://admin-shell.io/aas/3/0/RC01/File/value>
+                "/aasx/OperatingManual.pdf" ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/e9ac30e0-b5e3-4a49-9ae0-2910c9577159> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "DigitalFile_PDF" .
+
+<https://admin-shell.io/autogen/DefaultReference/62234f2d-a6aa-4d3f-b532-f93b68468cfa>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/080411cb-ef27-4b64-8a6e-ad097813e5f0> .
+
+<https://admin-shell.io/autogen/DefaultReference/c3f6784a-9fde-40c7-9042-c0c9f3812910>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/f278087f-b5fc-4aa8-96b8-5e8f1ba1b96e> .
+
+<https://admin-shell.io/autogen/DefaultKey/f278087f-b5fc-4aa8-96b8-5e8f1ba1b96e>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/Submodel> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "http.//i40.customer.com/type/1/1/7A7104BDAB57E184" .
+
+<https://admin-shell.io/autogen/DefaultKey/92f019c3-c6b2-4d35-9a67-4570270fd707>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/ConceptDescription> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Description/Titletest" .
+
+<https://admin-shell.io/autogen/DefaultKey/37e7a7ad-c78e-424b-b56c-d441c33d0736>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/KeyElements/GlobalReference> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "http://customer.com/Systems/IoT/1" .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/9387ebd9-3bb2-4b19-8086-db31970232dd>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Irdi> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "0173-1#02-BAA120#008" .
+
+<https://admin-shell.io/autogen/DefaultReference/680b8d8d-5fb0-4446-a1ee-6ca69740463b>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/1b50a97a-389a-472c-81db-3fdb50ddfc3c> .
+
+<https://admin-shell.io/autogen/DefaultKey/1b50a97a-389a-472c-81db-3fdb50ddfc3c>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Irdi> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/ConceptDescription> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "0173-1#02-BAA120#008" .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/4d9db900-214d-42e5-96f2-1c91181b9be2>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "http://i40.customer.com/type/1/1/1A7B62B529F19152" .
+
+<https://admin-shell.io/autogen/DefaultKey/71e9319b-e73e-46b8-be9f-3f94b17951f0>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/Asset> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "http://customer.com/assets/KHBVZJSQKIY" .
+
+<https://admin-shell.io/autogen/DefaultReference/e1b8ba6a-d640-4528-b3f1-875e03e8dada>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/997a0cfe-4c68-41d1-b308-6e40740b038e> .
+
+<https://admin-shell.io/autogen/DefaultReference/e0888cd1-2469-43b2-92a5-30606bb863d6>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/55d6fbc6-a549-4203-81da-45f008ef2395> .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/fa7acbf6-77d8-4504-8343-cdd245c6696b>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "http://customer.com/aas/9175_7013_7091_9168" .
+
+<https://admin-shell.io/autogen/DefaultReference/7dbf0543-e668-46b4-8e55-bf89e96b8756>
+        rdf:type  aas:Reference ;
+        <https://admin-shell.io/aas/3/0/RC01/Reference/key>
+                <https://admin-shell.io/autogen/DefaultKey/92f019c3-c6b2-4d35-9a67-4570270fd707> .
+
+<https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/f073b551-19f4-4ad5-a86d-ca32c7067664>
+        rdf:type  iec61360:DataSpecificationIEC61360 ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/dataType>
+                iec61360:String ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/definition>
+                "Eine Datei, die die Document Version repräsentiert. Neben der obligatorischen PDF Datei können weitere Dateien angegeben werden."@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/preferredName>
+                "DigitalFile"@en , "DigitaleDatei"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/shortName>
+                "DigitalFile"@en , "DigitaleDatei"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/sourceOfDefinition>
+                "" ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/unit>
+                "" .
+
+<https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/d28f3ff6-d906-4cdb-bfbd-7c2d5e5eb9ad>
+        rdf:type  aas:EmbeddedDataSpecification ;
+        <https://admin-shell.io/aas/3/0/RC01/EmbeddedDataSpecification/dataSpecificationContent>
+                <https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/0c18faf2-4ca9-4b81-b0d7-d534301f341a> .
+
+<https://admin-shell.io/autogen/DefaultAdministrativeInformation/52e8cec2-318f-4c3e-9089-b88a17e2713e>
+        rdf:type  aas:AdministrativeInformation ;
+        <https://admin-shell.io/aas/3/0/RC01/AdministrativeInformation/revision>
+                "2567" ;
+        <https://admin-shell.io/aas/3/0/RC01/AdministrativeInformation/version>
+                "" .
+
+<https://admin-shell.io/autogen/DefaultKey/55d6fbc6-a549-4203-81da-45f008ef2395>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/Submodel> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "http://i40.customer.com/instance/1/1/AC69B1CB44F07935" .
+
+<https://admin-shell.io/autogen/DefaultProperty/e2bf171a-5dd5-47a0-b3fa-2f66482b77c7>
+        rdf:type  aas:Property ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/680b8d8d-5fb0-4446-a1ee-6ca69740463b> ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/value>
+                "5000" ;
+        <https://admin-shell.io/aas/3/0/RC01/Property/valueType>
+                "integer" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/category>
+                "Parameter" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "MaxRotationSpeed" .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/8f88b42f-1e39-416c-bf4e-30714d02b2fa>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "www.vdi2770.com/blatt1/Entwurf/Okt18/cd/Description/Title" .
+
+<https://admin-shell.io/autogen/DefaultKey/997a0cfe-4c68-41d1-b308-6e40740b038e>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifiableElements/Submodel> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "http://i40.customer.com/type/1/1/1A7B62B529F19152" .
+
+<https://admin-shell.io/autogen/DefaultKey/080411cb-ef27-4b64-8a6e-ad097813e5f0>
+        rdf:type  aas:Key ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/type>
+                <https://admin-shell.io/aas/3/0/RC01/KeyElements/GlobalReference> ;
+        <https://admin-shell.io/aas/3/0/RC01/Key/value>
+                "http://customer.com/Systems/ERP/012" .
+
+<https://admin-shell.io/autogen/DefaultIdentifier/f0270e12-d98d-4b3c-b5a0-db589ec174bf>
+        rdf:type  aas:Identifier ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/idType>
+                <https://admin-shell.io/aas/3/0/RC01/IdentifierType/Iri> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifier/identifier>
+                "http://customer.com/cd/1/1/18EBD56F6B43D895" .
+
+<https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/0c18faf2-4ca9-4b81-b0d7-d534301f341a>
+        rdf:type  iec61360:DataSpecificationIEC61360 ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/dataType>
+                iec61360:RealMeasure ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/definition>
+                "Greatestpermissiblerotationspeedwithwhichthemotororfeedingunitmaybeoperated"@en , "HöchstezulässigeDrehzahl,mitwelcherderMotoroderdieSpeiseinheitbetriebenwerdendarf"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/preferredName>
+                "Max.rotationspeed"@en , "max.Drehzahl"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/sourceOfDefinition>
+                "" ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/unit>
+                "1/minEdited" ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/unitId>
+                <https://admin-shell.io/autogen/DefaultReference/8d09299a-86c1-47b3-8766-fa2c4efb768f> .
+
+<https://admin-shell.io/autogen/DefaultSubmodelElementCollection/af57dc81-ad31-4fa1-89d0-593b0d0b020a>
+        rdf:type  aas:SubmodelElementCollection ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/88ded045-3a63-4287-9471-9829566687b3> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "PascalsFile" ;
+        <https://admin-shell.io/aas/3/0/RC01/SubmodelElementCollection/allowDuplicates>
+                false ;
+        <https://admin-shell.io/aas/3/0/RC01/SubmodelElementCollection/ordered>
+                false ;
+        <https://admin-shell.io/aas/3/0/RC01/SubmodelElementCollection/value>
+                <https://admin-shell.io/autogen/DefaultProperty/36561935-99ee-49d5-9541-984db9528855> , <https://admin-shell.io/autogen/DefaultFile/32511a48-5bf9-4a1b-be17-27d46085a746> .
+
+<https://admin-shell.io/autogen/DefaultConceptDescription/cf5bc74e-6ca0-4cf6-a6d9-a607b14ae09e>
+        rdf:type  aas:ConceptDescription ;
+        <https://admin-shell.io/aas/3/0/RC01/HasDataSpecification/embeddedDataSpecification>
+                <https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/8d77e027-cd17-4112-a9f7-fd93d8fb4d8f> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/f0270e12-d98d-4b3c-b5a0-db589ec174bf> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/category>
+                "PROPERTY" ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "RotationSpeed" .
+
+<https://admin-shell.io/autogen/DefaultEmbeddedDataSpecification/8d77e027-cd17-4112-a9f7-fd93d8fb4d8f>
+        rdf:type  aas:EmbeddedDataSpecification ;
+        <https://admin-shell.io/aas/3/0/RC01/EmbeddedDataSpecification/dataSpecificationContent>
+                <https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/dc198e05-4e4e-4df4-a97e-2bebb4f1ed9c> .
+
+<https://admin-shell.io/autogen/DefaultSubmodelElementCollection/64564798-16d1-44bc-8967-4e2d4058b446>
+        rdf:type  aas:SubmodelElementCollection ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/HasSemantics/semanticId>
+                <https://admin-shell.io/autogen/DefaultReference/88ded045-3a63-4287-9471-9829566687b3> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "OperatingManual" ;
+        <https://admin-shell.io/aas/3/0/RC01/SubmodelElementCollection/allowDuplicates>
+                false ;
+        <https://admin-shell.io/aas/3/0/RC01/SubmodelElementCollection/ordered>
+                false ;
+        <https://admin-shell.io/aas/3/0/RC01/SubmodelElementCollection/value>
+                <https://admin-shell.io/autogen/DefaultProperty/3567777d-da96-446b-aab5-0afac52048eb> , <https://admin-shell.io/autogen/DefaultFile/93b8bea7-1f2c-40a7-89b8-e8c6b43023f6> .
+
+<https://admin-shell.io/autogen/DefaultSubmodel/10511af0-71f4-4d30-82fc-c4cc67f0ecfd>
+        rdf:type  aas:Submodel ;
+        <https://admin-shell.io/aas/3/0/RC01/HasKind/kind>
+                <https://admin-shell.io/aas/3/0/RC01/ModelingKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/4d9db900-214d-42e5-96f2-1c91181b9be2> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "Documentation" ;
+        <https://admin-shell.io/aas/3/0/RC01/Submodel/submodelElement>
+                <https://admin-shell.io/autogen/DefaultSubmodelElementCollection/af57dc81-ad31-4fa1-89d0-593b0d0b020a> , <https://admin-shell.io/autogen/DefaultSubmodelElementCollection/64564798-16d1-44bc-8967-4e2d4058b446> .
+
+<https://admin-shell.io/autogen/DefaultAssetAdministrationShellEnvironment/0c0b8819-ea77-4f94-83a1-2313b48f1014>
+        rdf:type  aas:AssetAdministrationShellEnvironment ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetAdministrationShellEnvironment/assetAdministrationShells>
+                <https://admin-shell.io/autogen/DefaultAssetAdministrationShell/cff176d8-08bd-416a-83f8-ed196aa8cdb5> ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetAdministrationShellEnvironment/conceptDescriptions>
+                <https://admin-shell.io/autogen/DefaultConceptDescription/727041b2-3223-43b6-a9ef-62c1fe361488> , <https://admin-shell.io/autogen/DefaultConceptDescription/41e6e445-9cc5-4a43-a176-6f7a1f7ba4bf> , <https://admin-shell.io/autogen/DefaultConceptDescription/2141e4c7-13de-4f45-bc01-3ade0fd4138a> , <https://admin-shell.io/autogen/DefaultConceptDescription/6ab70bcd-3a67-47b8-9967-fdedb5bd7ac2> , <https://admin-shell.io/autogen/DefaultConceptDescription/cf5bc74e-6ca0-4cf6-a6d9-a607b14ae09e> ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetAdministrationShellEnvironment/submodels>
+                <https://admin-shell.io/autogen/DefaultSubmodel/67ddb5a7-8cf6-457f-9ab1-51d019fe7b79> , <https://admin-shell.io/autogen/DefaultSubmodel/93b29dd6-b4e8-417a-b4be-ef5f8b81e4d3> , <https://admin-shell.io/autogen/DefaultSubmodel/10511af0-71f4-4d30-82fc-c4cc67f0ecfd> .
+
+<https://admin-shell.io/autogen/DefaultAssetAdministrationShell/cff176d8-08bd-416a-83f8-ed196aa8cdb5>
+        rdf:type  aas:AssetAdministrationShell ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetAdministrationShell/assetInformation>
+                <https://admin-shell.io/autogen/DefaultAssetInformation/ee1f721d-5bab-4ab7-b68b-2dd64350cd96> ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetAdministrationShell/submodel>
+                <https://admin-shell.io/autogen/DefaultReference/c3f6784a-9fde-40c7-9042-c0c9f3812910> , <https://admin-shell.io/autogen/DefaultReference/e1b8ba6a-d640-4528-b3f1-875e03e8dada> , <https://admin-shell.io/autogen/DefaultReference/e0888cd1-2469-43b2-92a5-30606bb863d6> ;
+        <https://admin-shell.io/aas/3/0/RC01/Identifiable/identification>
+                <https://admin-shell.io/autogen/DefaultIdentifier/fa7acbf6-77d8-4504-8343-cdd245c6696b> ;
+        <https://admin-shell.io/aas/3/0/RC01/Referable/idShort>
+                "ExampleMotor" .
+
+<https://admin-shell.io/autogen/DefaultDataSpecificationIEC61360/dc198e05-4e4e-4df4-a97e-2bebb4f1ed9c>
+        rdf:type  iec61360:DataSpecificationIEC61360 ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/dataType>
+                iec61360:RealMeasure ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/definition>
+                "Aktuelle Drehzahl, mitwelcher der Motor oder die Speiseinheit betrieben wird"@de , "Actual rotationspeed with which the motor or feedingunit is operated"@en ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/preferredName>
+                "Actualrotationspeed"@en , "AktuelleDrehzahl"@de ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/shortName>
+                "AktuelleDrehzahl"@de , "ActualRotationSpeed"@en ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/sourceOfDefinition>
+                "" ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/unit>
+                "1/minEdited" ;
+        <https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0/RC01/DataSpecificationIEC61360/unitId>
+                <https://admin-shell.io/autogen/DefaultReference/8d09299a-86c1-47b3-8766-fa2c4efb768f> .
+
+<https://admin-shell.io/autogen/DefaultAssetInformation/ee1f721d-5bab-4ab7-b68b-2dd64350cd96>
+        rdf:type  aas:AssetInformation ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetInformation/assetKind>
+                <https://admin-shell.io/aas/3/0/RC01/AssetKind/Instance> ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetInformation/defaultThumbnail>
+                <https://admin-shell.io/autogen/DefaultFile/8601be49-9842-454e-818c-59096879c706> ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetInformation/globalAssetId>
+                <https://admin-shell.io/autogen/DefaultReference/fbed6912-141e-4ce9-a2ed-b76c052a5e3e> ;
+        <https://admin-shell.io/aas/3/0/RC01/AssetInformation/specificAssetId>
+                <https://admin-shell.io/autogen/DefaultIdentifierKeyValuePair/c5c5e763-baef-4f39-9a1c-f6c1bbc137ee> , <https://admin-shell.io/autogen/DefaultIdentifierKeyValuePair/2039e620-54c6-458a-88ed-fed95db4c7b5> .
